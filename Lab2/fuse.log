@@ -1,0 +1,41 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/SIPL/Desktop/Lab2/Lab2/ALU_TEST_isim_beh.exe" -prj "C:/Users/SIPL/Desktop/Lab2/Lab2/ALU_TEST_beh.prj" "work.ALU_TEST" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/SR_LOGI.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/SR_ARITH.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/SL_LOGI.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/SLTU.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/SLT.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/MULTU.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/DIVU.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/DIV.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/BOOTH_MUL.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/alu.vhd" into library work
+Parsing VHDL file "C:/Users/SIPL/Desktop/Lab2/Lab2/ALU_TEST.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture adder_arch of entity adder [\adder(32)\]
+Compiling architecture slt_arch of entity SLT [\SLT(32)\]
+Compiling architecture sltu_arch of entity SLTU [\SLTU(32)\]
+Compiling architecture booth_mult_arch of entity BOOTH_MULT [\BOOTH_MULT(32)\]
+Compiling architecture multu_arch of entity MULTU [\MULTU(32)\]
+Compiling architecture divu_arch of entity DIVU [\DIVU(32)\]
+Compiling architecture div_arch of entity DIV [\DIV(32)\]
+Compiling architecture sl_logi of entity SL_LOGI [\SL_LOGI(32)\]
+Compiling architecture sr_arith_archi of entity SR_ARITH [\SR_ARITH(32)\]
+Compiling architecture sr_logi of entity SR_LOGI [\SR_LOGI(32)\]
+Compiling architecture behavioral of entity alu [\alu(32)\]
+Compiling architecture behavior of entity alu_test
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 28 VHDL Units
+Built simulation executable C:/Users/SIPL/Desktop/Lab2/Lab2/ALU_TEST_isim_beh.exe
+Fuse Memory Usage: 36636 KB
+Fuse CPU Usage: 1949 ms

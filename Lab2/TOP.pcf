@@ -1,0 +1,393 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Oct 01 12:51:11 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CLOCK" LOCATE = SITE "E3" LEVEL 1;
+COMP "RX" LOCATE = SITE "C4" LEVEL 1;
+COMP "TX" LOCATE = SITE "D4" LEVEL 1;
+COMP "STATE_LED<0>" LOCATE = SITE "P2" LEVEL 1;
+COMP "STATE_LED<1>" LOCATE = SITE "R2" LEVEL 1;
+COMP "RESET" LOCATE = SITE "E16" LEVEL 1;
+COMP "RESET_ALU" LOCATE = SITE "V10" LEVEL 1;
+COMP "LEDS<2>" LOCATE = SITE "R8" LEVEL 1;
+COMP "LEDS<1>" LOCATE = SITE "V9" LEVEL 1;
+COMP "LEDS<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "LEDS<0>" LOCATE = SITE "T8" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "uart_data_out_stb_prev" BEL "bytecounter_0" BEL
+        "bytecounter_1" BEL "bytecounter_2" BEL "bytecounter_3" BEL
+        "bytecounter_4" BEL "uart_data_out_ack" BEL "Operand2_0" BEL
+        "Operand2_1" BEL "Operand2_2" BEL "Operand2_3" BEL "Operand2_4" BEL
+        "Operand2_5" BEL "Operand2_6" BEL "Operand2_7" BEL "Operand2_8" BEL
+        "Operand2_9" BEL "Operand2_10" BEL "Operand2_11" BEL "Operand2_12" BEL
+        "Operand2_13" BEL "Operand2_14" BEL "Operand2_15" BEL "Operand2_16"
+        BEL "Operand2_17" BEL "Operand2_18" BEL "Operand2_19" BEL
+        "Operand2_20" BEL "Operand2_21" BEL "Operand2_22" BEL "Operand2_23"
+        BEL "Operand2_24" BEL "Operand2_25" BEL "Operand2_26" BEL
+        "Operand2_27" BEL "Operand2_28" BEL "Operand2_29" BEL "Operand2_30"
+        BEL "Operand2_31" BEL "Operand1_0" BEL "Operand1_1" BEL "Operand1_2"
+        BEL "Operand1_3" BEL "Operand1_4" BEL "Operand1_5" BEL "Operand1_6"
+        BEL "Operand1_7" BEL "Operand1_8" BEL "Operand1_9" BEL "Operand1_10"
+        BEL "Operand1_11" BEL "Operand1_12" BEL "Operand1_13" BEL
+        "Operand1_14" BEL "Operand1_15" BEL "Operand1_16" BEL "Operand1_17"
+        BEL "Operand1_18" BEL "Operand1_19" BEL "Operand1_20" BEL
+        "Operand1_21" BEL "Operand1_22" BEL "Operand1_23" BEL "Operand1_24"
+        BEL "Operand1_25" BEL "Operand1_26" BEL "Operand1_27" BEL
+        "Operand1_28" BEL "Operand1_29" BEL "Operand1_30" BEL "Operand1_31"
+        BEL "Control_2" BEL "Control_4" BEL "Control_3" BEL "uart_data_in_stb"
+        BEL "Control_1" BEL "Control_0" BEL "storage_0" BEL "storage_1" BEL
+        "storage_2" BEL "storage_3" BEL "storage_4" BEL "storage_5" BEL
+        "storage_6" BEL "storage_7" BEL "storage_8" BEL "storage_9" BEL
+        "storage_10" BEL "storage_11" BEL "storage_12" BEL "storage_13" BEL
+        "storage_14" BEL "storage_15" BEL "storage_16" BEL "storage_17" BEL
+        "storage_18" BEL "storage_19" BEL "storage_20" BEL "storage_21" BEL
+        "storage_22" BEL "storage_23" BEL "storage_24" BEL "storage_25" BEL
+        "storage_26" BEL "storage_27" BEL "storage_28" BEL "storage_29" BEL
+        "storage_30" BEL "storage_31" BEL "storage_32" BEL "storage_33" BEL
+        "storage_34" BEL "storage_35" BEL "storage_36" BEL "storage_37" BEL
+        "storage_38" BEL "storage_39" BEL "storage_40" BEL "storage_41" BEL
+        "storage_42" BEL "storage_43" BEL "storage_44" BEL "storage_45" BEL
+        "storage_46" BEL "storage_47" BEL "storage_48" BEL "storage_49" BEL
+        "storage_50" BEL "storage_51" BEL "storage_52" BEL "storage_53" BEL
+        "storage_54" BEL "storage_55" BEL "storage_56" BEL "storage_57" BEL
+        "storage_58" BEL "storage_59" BEL "storage_60" BEL "storage_61" BEL
+        "storage_62" BEL "storage_63" BEL "storage_64" BEL "storage_65" BEL
+        "storage_66" BEL "storage_67" BEL "storage_68" BEL "storage_69" BEL
+        "storage_70" BEL "storage_71" BEL "storage_72" BEL "storage_73" BEL
+        "storage_74" BEL "storage_75" BEL "storage_76" BEL "storage_77" BEL
+        "storage_78" BEL "storage_79" BEL "storage_80" BEL "storage_81" BEL
+        "storage_82" BEL "storage_83" BEL "storage_84" BEL "storage_85" BEL
+        "storage_86" BEL "storage_87" BEL "storage_88" BEL "storage_89" BEL
+        "storage_90" BEL "storage_91" BEL "storage_92" BEL "storage_93" BEL
+        "storage_94" BEL "storage_95" BEL "storage_96" BEL "storage_97" BEL
+        "storage_98" BEL "storage_99" BEL "storage_100" BEL "storage_101" BEL
+        "storage_102" BEL "storage_103" BEL "storage_104" BEL "storage_105"
+        BEL "storage_106" BEL "storage_107" BEL "storage_108" BEL
+        "storage_109" BEL "storage_110" BEL "storage_111" BEL "storage_112"
+        BEL "storage_113" BEL "storage_114" BEL "uart_data_in_0" BEL
+        "uart_data_in_1" BEL "uart_data_in_2" BEL "uart_data_in_3" BEL
+        "uart_data_in_4" BEL "uart_data_in_5" BEL "uart_data_in_6" BEL
+        "uart_data_in_7" BEL "state_FSM_FFd2" BEL "state_FSM_FFd1" BEL
+        "cyclecounter_0" BEL "cyclecounter_1" BEL "cyclecounter_2" BEL
+        "cyclecounter_3" BEL "cyclecounter_4" BEL "cyclecounter_5" BEL
+        "cyclecounter_6" BEL "cyclecounter_7" BEL "cyclecounter_8" BEL
+        "cyclecounter_9" BEL "cyclecounter_10" BEL "cyclecounter_11" BEL
+        "cyclecounter_12" BEL "cyclecounter_13" BEL "cyclecounter_14" BEL
+        "cyclecounter_15" BEL "UART1/uart_rx_filter_1" BEL
+        "UART1/uart_rx_filter_0" BEL "UART1/uart_tx_state_FSM_FFd2" BEL
+        "UART1/uart_tx_state_FSM_FFd3" BEL "UART1/uart_tx_state_FSM_FFd1" BEL
+        "UART1/uart_rx_state_FSM_FFd2" BEL "UART1/uart_rx_count_2" BEL
+        "UART1/uart_rx_count_1" BEL "UART1/uart_rx_count_0" BEL
+        "UART1/uart_rx_state_FSM_FFd1" BEL "UART1/uart_tx_count_2" BEL
+        "UART1/uart_tx_count_1" BEL "UART1/uart_tx_count_0" BEL
+        "UART1/uart_tx_data" BEL "UART1/uart_rx_sync_clock_3" BEL
+        "UART1/uart_rx_sync_clock_2" BEL "UART1/uart_rx_sync_clock_1" BEL
+        "UART1/uart_rx_sync_clock_0" BEL "UART1/uart_rx_data_out_stb" BEL
+        "UART1/uart_rx_data_block_7" BEL "UART1/uart_rx_data_block_6" BEL
+        "UART1/uart_rx_data_block_5" BEL "UART1/uart_rx_data_block_4" BEL
+        "UART1/uart_rx_data_block_3" BEL "UART1/uart_rx_data_block_2" BEL
+        "UART1/uart_rx_data_block_1" BEL "UART1/uart_rx_data_block_0" BEL
+        "UART1/baud_counter_3" BEL "UART1/baud_counter_2" BEL
+        "UART1/baud_counter_1" BEL "UART1/baud_counter_0" BEL
+        "UART1/oversample_baud_counter_5" BEL
+        "UART1/oversample_baud_counter_4" BEL
+        "UART1/oversample_baud_counter_3" BEL
+        "UART1/oversample_baud_counter_2" BEL
+        "UART1/oversample_baud_counter_1" BEL
+        "UART1/oversample_baud_counter_0" BEL "UART1/uart_rx_bit" BEL
+        "UART1/uart_rx_data_in_ack" BEL "UART1/uart_tx_data_block_7" BEL
+        "UART1/uart_tx_data_block_6" BEL "UART1/uart_tx_data_block_5" BEL
+        "UART1/uart_tx_data_block_4" BEL "UART1/uart_tx_data_block_3" BEL
+        "UART1/uart_tx_data_block_2" BEL "UART1/uart_tx_data_block_1" BEL
+        "UART1/uart_tx_data_block_0" BEL "UART1/oversample_baud_tick" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_7" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_6" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_5" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_4" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_3" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_2" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_1" BEL
+        "ALU1/MULTI_CYCLE_PROCESS.count_0" BEL "ALU1/Result1_multi_31" BEL
+        "ALU1/Result1_multi_30" BEL "ALU1/Result1_multi_29" BEL
+        "ALU1/Result1_multi_28" BEL "ALU1/Result1_multi_27" BEL
+        "ALU1/Result1_multi_26" BEL "ALU1/Result1_multi_25" BEL
+        "ALU1/Result1_multi_24" BEL "ALU1/Result1_multi_23" BEL
+        "ALU1/Result1_multi_22" BEL "ALU1/Result1_multi_21" BEL
+        "ALU1/Result1_multi_20" BEL "ALU1/Result1_multi_19" BEL
+        "ALU1/Result1_multi_18" BEL "ALU1/Result1_multi_17" BEL
+        "ALU1/Result1_multi_16" BEL "ALU1/Result1_multi_15" BEL
+        "ALU1/Result1_multi_14" BEL "ALU1/Result1_multi_13" BEL
+        "ALU1/Result1_multi_12" BEL "ALU1/Result1_multi_11" BEL
+        "ALU1/Result1_multi_10" BEL "ALU1/Result1_multi_9" BEL
+        "ALU1/Result1_multi_8" BEL "ALU1/Result1_multi_7" BEL
+        "ALU1/Result1_multi_6" BEL "ALU1/Result1_multi_5" BEL
+        "ALU1/Result1_multi_4" BEL "ALU1/Result1_multi_3" BEL
+        "ALU1/Result1_multi_2" BEL "ALU1/Result1_multi_1" BEL
+        "ALU1/Result1_multi_0" BEL "ALU1/Result2_multi_31" BEL
+        "ALU1/Result2_multi_30" BEL "ALU1/Result2_multi_29" BEL
+        "ALU1/Result2_multi_28" BEL "ALU1/Result2_multi_27" BEL
+        "ALU1/Result2_multi_26" BEL "ALU1/Result2_multi_25" BEL
+        "ALU1/Result2_multi_24" BEL "ALU1/Result2_multi_23" BEL
+        "ALU1/Result2_multi_22" BEL "ALU1/Result2_multi_21" BEL
+        "ALU1/Result2_multi_20" BEL "ALU1/Result2_multi_19" BEL
+        "ALU1/Result2_multi_18" BEL "ALU1/Result2_multi_17" BEL
+        "ALU1/Result2_multi_16" BEL "ALU1/Result2_multi_15" BEL
+        "ALU1/Result2_multi_14" BEL "ALU1/Result2_multi_13" BEL
+        "ALU1/Result2_multi_12" BEL "ALU1/Result2_multi_11" BEL
+        "ALU1/Result2_multi_10" BEL "ALU1/Result2_multi_9" BEL
+        "ALU1/Result2_multi_8" BEL "ALU1/Result2_multi_7" BEL
+        "ALU1/Result2_multi_6" BEL "ALU1/Result2_multi_5" BEL
+        "ALU1/Result2_multi_4" BEL "ALU1/Result2_multi_3" BEL
+        "ALU1/Result2_multi_2" BEL "ALU1/Result2_multi_1" BEL
+        "ALU1/Result2_multi_0" BEL "ALU1/done" BEL "ALU1/Debug_multi_31" BEL
+        "ALU1/Debug_multi_30" BEL "ALU1/Debug_multi_29" BEL
+        "ALU1/Debug_multi_28" BEL "ALU1/Debug_multi_27" BEL
+        "ALU1/Debug_multi_26" BEL "ALU1/Debug_multi_25" BEL
+        "ALU1/Debug_multi_24" BEL "ALU1/Debug_multi_23" BEL
+        "ALU1/Debug_multi_22" BEL "ALU1/Debug_multi_21" BEL
+        "ALU1/Debug_multi_20" BEL "ALU1/Debug_multi_19" BEL
+        "ALU1/Debug_multi_18" BEL "ALU1/Debug_multi_17" BEL
+        "ALU1/Debug_multi_16" BEL "ALU1/Debug_multi_15" BEL
+        "ALU1/Debug_multi_14" BEL "ALU1/Debug_multi_13" BEL
+        "ALU1/Debug_multi_12" BEL "ALU1/Debug_multi_11" BEL
+        "ALU1/Debug_multi_10" BEL "ALU1/Debug_multi_9" BEL
+        "ALU1/Debug_multi_8" BEL "ALU1/Debug_multi_7" BEL "ALU1/Debug_multi_6"
+        BEL "ALU1/Debug_multi_5" BEL "ALU1/Debug_multi_4" BEL
+        "ALU1/Debug_multi_3" BEL "ALU1/Debug_multi_2" BEL "ALU1/Debug_multi_1"
+        BEL "ALU1/Debug_multi_0" BEL "ALU1/state" BEL "ALU1/multb32/S_33" BEL
+        "ALU1/multb32/S_34" BEL "ALU1/multb32/S_35" BEL "ALU1/multb32/S_36"
+        BEL "ALU1/multb32/S_37" BEL "ALU1/multb32/S_38" BEL
+        "ALU1/multb32/S_39" BEL "ALU1/multb32/S_40" BEL "ALU1/multb32/S_41"
+        BEL "ALU1/multb32/S_42" BEL "ALU1/multb32/S_43" BEL
+        "ALU1/multb32/S_44" BEL "ALU1/multb32/S_45" BEL "ALU1/multb32/S_46"
+        BEL "ALU1/multb32/S_47" BEL "ALU1/multb32/S_48" BEL
+        "ALU1/multb32/S_49" BEL "ALU1/multb32/S_50" BEL "ALU1/multb32/S_51"
+        BEL "ALU1/multb32/S_52" BEL "ALU1/multb32/S_53" BEL
+        "ALU1/multb32/S_54" BEL "ALU1/multb32/S_55" BEL "ALU1/multb32/S_56"
+        BEL "ALU1/multb32/S_57" BEL "ALU1/multb32/S_58" BEL
+        "ALU1/multb32/S_59" BEL "ALU1/multb32/S_60" BEL "ALU1/multb32/S_61"
+        BEL "ALU1/multb32/S_62" BEL "ALU1/multb32/S_63" BEL
+        "ALU1/multb32/S_64" BEL "ALU1/multb32/P_63" BEL "ALU1/multb32/P_62"
+        BEL "ALU1/multb32/P_61" BEL "ALU1/multb32/P_60" BEL
+        "ALU1/multb32/P_59" BEL "ALU1/multb32/P_58" BEL "ALU1/multb32/P_57"
+        BEL "ALU1/multb32/P_56" BEL "ALU1/multb32/P_55" BEL
+        "ALU1/multb32/P_54" BEL "ALU1/multb32/P_53" BEL "ALU1/multb32/P_52"
+        BEL "ALU1/multb32/P_51" BEL "ALU1/multb32/P_50" BEL
+        "ALU1/multb32/P_49" BEL "ALU1/multb32/P_48" BEL "ALU1/multb32/P_47"
+        BEL "ALU1/multb32/P_46" BEL "ALU1/multb32/P_45" BEL
+        "ALU1/multb32/P_44" BEL "ALU1/multb32/P_43" BEL "ALU1/multb32/P_42"
+        BEL "ALU1/multb32/P_41" BEL "ALU1/multb32/P_40" BEL
+        "ALU1/multb32/P_39" BEL "ALU1/multb32/P_38" BEL "ALU1/multb32/P_37"
+        BEL "ALU1/multb32/P_36" BEL "ALU1/multb32/P_35" BEL
+        "ALU1/multb32/P_34" BEL "ALU1/multb32/P_33" BEL "ALU1/multb32/P_32"
+        BEL "ALU1/multb32/P_31" BEL "ALU1/multb32/P_30" BEL
+        "ALU1/multb32/P_29" BEL "ALU1/multb32/P_28" BEL "ALU1/multb32/P_27"
+        BEL "ALU1/multb32/P_26" BEL "ALU1/multb32/P_25" BEL
+        "ALU1/multb32/P_24" BEL "ALU1/multb32/P_23" BEL "ALU1/multb32/P_22"
+        BEL "ALU1/multb32/P_21" BEL "ALU1/multb32/P_20" BEL
+        "ALU1/multb32/P_19" BEL "ALU1/multb32/P_18" BEL "ALU1/multb32/P_17"
+        BEL "ALU1/multb32/P_16" BEL "ALU1/multb32/P_15" BEL
+        "ALU1/multb32/P_14" BEL "ALU1/multb32/P_13" BEL "ALU1/multb32/P_12"
+        BEL "ALU1/multb32/P_11" BEL "ALU1/multb32/P_10" BEL "ALU1/multb32/P_9"
+        BEL "ALU1/multb32/P_8" BEL "ALU1/multb32/P_7" BEL "ALU1/multb32/P_6"
+        BEL "ALU1/multb32/P_5" BEL "ALU1/multb32/P_4" BEL "ALU1/multb32/P_3"
+        BEL "ALU1/multb32/P_2" BEL "ALU1/multb32/P_1" BEL "ALU1/multb32/P_0"
+        BEL "ALU1/multb32/A_34" BEL "ALU1/multb32/A_36" BEL
+        "ALU1/multb32/A_37" BEL "ALU1/multb32/A_35" BEL "ALU1/multb32/A_39"
+        BEL "ALU1/multb32/A_40" BEL "ALU1/multb32/A_38" BEL
+        "ALU1/multb32/A_42" BEL "ALU1/multb32/A_43" BEL "ALU1/multb32/A_41"
+        BEL "ALU1/multb32/A_44" BEL "ALU1/multb32/A_45" BEL
+        "ALU1/multb32/A_47" BEL "ALU1/multb32/A_48" BEL "ALU1/multb32/A_46"
+        BEL "ALU1/multb32/A_49" BEL "ALU1/multb32/A_50" BEL
+        "ALU1/multb32/A_52" BEL "ALU1/multb32/A_53" BEL "ALU1/multb32/A_51"
+        BEL "ALU1/multb32/A_54" BEL "ALU1/multb32/A_55" BEL
+        "ALU1/multb32/A_57" BEL "ALU1/multb32/A_58" BEL "ALU1/multb32/A_56"
+        BEL "ALU1/multb32/A_60" BEL "ALU1/multb32/A_61" BEL
+        "ALU1/multb32/A_59" BEL "ALU1/multb32/A_63" BEL "ALU1/multb32/A_64"
+        BEL "ALU1/multb32/A_62" BEL "ALU1/multu32/temp_sum_62" BEL
+        "ALU1/multu32/temp_sum_61" BEL "ALU1/multu32/temp_sum_60" BEL
+        "ALU1/multu32/temp_sum_59" BEL "ALU1/multu32/temp_sum_58" BEL
+        "ALU1/multu32/temp_sum_57" BEL "ALU1/multu32/temp_sum_56" BEL
+        "ALU1/multu32/temp_sum_55" BEL "ALU1/multu32/temp_sum_54" BEL
+        "ALU1/multu32/temp_sum_53" BEL "ALU1/multu32/temp_sum_52" BEL
+        "ALU1/multu32/temp_sum_51" BEL "ALU1/multu32/temp_sum_50" BEL
+        "ALU1/multu32/temp_sum_49" BEL "ALU1/multu32/temp_sum_48" BEL
+        "ALU1/multu32/temp_sum_47" BEL "ALU1/multu32/temp_sum_46" BEL
+        "ALU1/multu32/temp_sum_45" BEL "ALU1/multu32/temp_sum_44" BEL
+        "ALU1/multu32/temp_sum_43" BEL "ALU1/multu32/temp_sum_42" BEL
+        "ALU1/multu32/temp_sum_41" BEL "ALU1/multu32/temp_sum_40" BEL
+        "ALU1/multu32/temp_sum_39" BEL "ALU1/multu32/temp_sum_38" BEL
+        "ALU1/multu32/temp_sum_37" BEL "ALU1/multu32/temp_sum_36" BEL
+        "ALU1/multu32/temp_sum_35" BEL "ALU1/multu32/temp_sum_34" BEL
+        "ALU1/multu32/temp_sum_33" BEL "ALU1/multu32/temp_sum_32" BEL
+        "ALU1/multu32/temp_sum_31" BEL "ALU1/multu32/temp_sum_30" BEL
+        "ALU1/multu32/temp_sum_29" BEL "ALU1/multu32/temp_sum_28" BEL
+        "ALU1/multu32/temp_sum_27" BEL "ALU1/multu32/temp_sum_26" BEL
+        "ALU1/multu32/temp_sum_25" BEL "ALU1/multu32/temp_sum_24" BEL
+        "ALU1/multu32/temp_sum_23" BEL "ALU1/multu32/temp_sum_22" BEL
+        "ALU1/multu32/temp_sum_21" BEL "ALU1/multu32/temp_sum_20" BEL
+        "ALU1/multu32/temp_sum_19" BEL "ALU1/multu32/temp_sum_18" BEL
+        "ALU1/multu32/temp_sum_17" BEL "ALU1/multu32/temp_sum_16" BEL
+        "ALU1/multu32/temp_sum_15" BEL "ALU1/multu32/temp_sum_14" BEL
+        "ALU1/multu32/temp_sum_13" BEL "ALU1/multu32/temp_sum_12" BEL
+        "ALU1/multu32/temp_sum_11" BEL "ALU1/multu32/temp_sum_10" BEL
+        "ALU1/multu32/temp_sum_9" BEL "ALU1/multu32/temp_sum_8" BEL
+        "ALU1/multu32/temp_sum_7" BEL "ALU1/multu32/temp_sum_6" BEL
+        "ALU1/multu32/temp_sum_5" BEL "ALU1/multu32/temp_sum_4" BEL
+        "ALU1/multu32/temp_sum_3" BEL "ALU1/multu32/temp_sum_2" BEL
+        "ALU1/multu32/temp_sum_1" BEL "ALU1/multu32/temp_sum_0" BEL
+        "ALU1/divu32/RemainderDU_31" BEL "ALU1/divu32/rem_div_63" BEL
+        "ALU1/divu32/rem_div_62" BEL "ALU1/divu32/rem_div_61" BEL
+        "ALU1/divu32/rem_div_60" BEL "ALU1/divu32/rem_div_59" BEL
+        "ALU1/divu32/rem_div_58" BEL "ALU1/divu32/rem_div_57" BEL
+        "ALU1/divu32/rem_div_56" BEL "ALU1/divu32/rem_div_55" BEL
+        "ALU1/divu32/rem_div_54" BEL "ALU1/divu32/rem_div_53" BEL
+        "ALU1/divu32/rem_div_52" BEL "ALU1/divu32/rem_div_51" BEL
+        "ALU1/divu32/rem_div_50" BEL "ALU1/divu32/rem_div_49" BEL
+        "ALU1/divu32/rem_div_48" BEL "ALU1/divu32/rem_div_47" BEL
+        "ALU1/divu32/rem_div_46" BEL "ALU1/divu32/rem_div_45" BEL
+        "ALU1/divu32/rem_div_44" BEL "ALU1/divu32/rem_div_43" BEL
+        "ALU1/divu32/rem_div_42" BEL "ALU1/divu32/rem_div_41" BEL
+        "ALU1/divu32/rem_div_40" BEL "ALU1/divu32/rem_div_39" BEL
+        "ALU1/divu32/rem_div_38" BEL "ALU1/divu32/rem_div_37" BEL
+        "ALU1/divu32/rem_div_36" BEL "ALU1/divu32/rem_div_35" BEL
+        "ALU1/divu32/rem_div_34" BEL "ALU1/divu32/rem_div_33" BEL
+        "ALU1/divu32/rem_div_32" BEL "ALU1/divu32/rem_div_31" BEL
+        "ALU1/divu32/rem_div_30" BEL "ALU1/divu32/rem_div_29" BEL
+        "ALU1/divu32/rem_div_28" BEL "ALU1/divu32/rem_div_27" BEL
+        "ALU1/divu32/rem_div_26" BEL "ALU1/divu32/rem_div_25" BEL
+        "ALU1/divu32/rem_div_24" BEL "ALU1/divu32/rem_div_23" BEL
+        "ALU1/divu32/rem_div_22" BEL "ALU1/divu32/rem_div_21" BEL
+        "ALU1/divu32/rem_div_20" BEL "ALU1/divu32/rem_div_19" BEL
+        "ALU1/divu32/rem_div_18" BEL "ALU1/divu32/rem_div_17" BEL
+        "ALU1/divu32/rem_div_16" BEL "ALU1/divu32/rem_div_15" BEL
+        "ALU1/divu32/rem_div_14" BEL "ALU1/divu32/rem_div_13" BEL
+        "ALU1/divu32/rem_div_12" BEL "ALU1/divu32/rem_div_11" BEL
+        "ALU1/divu32/rem_div_10" BEL "ALU1/divu32/rem_div_9" BEL
+        "ALU1/divu32/rem_div_8" BEL "ALU1/divu32/rem_div_7" BEL
+        "ALU1/divu32/rem_div_6" BEL "ALU1/divu32/rem_div_5" BEL
+        "ALU1/divu32/rem_div_4" BEL "ALU1/divu32/rem_div_3" BEL
+        "ALU1/divu32/rem_div_2" BEL "ALU1/divu32/rem_div_1" BEL
+        "ALU1/divu32/rem_div_0" BEL "ALU1/divu32/dsr_31" BEL
+        "ALU1/divu32/dsr_30" BEL "ALU1/divu32/dsr_29" BEL "ALU1/divu32/dsr_28"
+        BEL "ALU1/divu32/dsr_27" BEL "ALU1/divu32/dsr_26" BEL
+        "ALU1/divu32/dsr_25" BEL "ALU1/divu32/dsr_24" BEL "ALU1/divu32/dsr_23"
+        BEL "ALU1/divu32/dsr_22" BEL "ALU1/divu32/dsr_21" BEL
+        "ALU1/divu32/dsr_20" BEL "ALU1/divu32/dsr_19" BEL "ALU1/divu32/dsr_18"
+        BEL "ALU1/divu32/dsr_17" BEL "ALU1/divu32/dsr_16" BEL
+        "ALU1/divu32/dsr_15" BEL "ALU1/divu32/dsr_14" BEL "ALU1/divu32/dsr_13"
+        BEL "ALU1/divu32/dsr_12" BEL "ALU1/divu32/dsr_11" BEL
+        "ALU1/divu32/dsr_10" BEL "ALU1/divu32/dsr_9" BEL "ALU1/divu32/dsr_8"
+        BEL "ALU1/divu32/dsr_7" BEL "ALU1/divu32/dsr_6" BEL
+        "ALU1/divu32/dsr_5" BEL "ALU1/divu32/dsr_4" BEL "ALU1/divu32/dsr_3"
+        BEL "ALU1/divu32/dsr_2" BEL "ALU1/divu32/dsr_1" BEL
+        "ALU1/divu32/dsr_0" BEL "ALU1/div32/QuotientD_31" BEL
+        "ALU1/div32/QuotientD_30" BEL "ALU1/div32/QuotientD_29" BEL
+        "ALU1/div32/QuotientD_28" BEL "ALU1/div32/QuotientD_27" BEL
+        "ALU1/div32/QuotientD_26" BEL "ALU1/div32/QuotientD_25" BEL
+        "ALU1/div32/QuotientD_24" BEL "ALU1/div32/QuotientD_23" BEL
+        "ALU1/div32/QuotientD_22" BEL "ALU1/div32/QuotientD_21" BEL
+        "ALU1/div32/QuotientD_20" BEL "ALU1/div32/QuotientD_19" BEL
+        "ALU1/div32/QuotientD_18" BEL "ALU1/div32/QuotientD_17" BEL
+        "ALU1/div32/QuotientD_16" BEL "ALU1/div32/QuotientD_15" BEL
+        "ALU1/div32/QuotientD_14" BEL "ALU1/div32/QuotientD_13" BEL
+        "ALU1/div32/QuotientD_12" BEL "ALU1/div32/QuotientD_11" BEL
+        "ALU1/div32/QuotientD_10" BEL "ALU1/div32/QuotientD_9" BEL
+        "ALU1/div32/QuotientD_8" BEL "ALU1/div32/QuotientD_7" BEL
+        "ALU1/div32/QuotientD_6" BEL "ALU1/div32/QuotientD_5" BEL
+        "ALU1/div32/QuotientD_4" BEL "ALU1/div32/QuotientD_3" BEL
+        "ALU1/div32/QuotientD_2" BEL "ALU1/div32/QuotientD_1" BEL
+        "ALU1/div32/QuotientD_0" BEL "ALU1/div32/RemainderD_31" BEL
+        "ALU1/div32/dsr_31" BEL "ALU1/div32/dsr_30" BEL "ALU1/div32/dsr_29"
+        BEL "ALU1/div32/dsr_28" BEL "ALU1/div32/dsr_27" BEL
+        "ALU1/div32/dsr_26" BEL "ALU1/div32/dsr_25" BEL "ALU1/div32/dsr_24"
+        BEL "ALU1/div32/dsr_23" BEL "ALU1/div32/dsr_22" BEL
+        "ALU1/div32/dsr_21" BEL "ALU1/div32/dsr_20" BEL "ALU1/div32/dsr_19"
+        BEL "ALU1/div32/dsr_18" BEL "ALU1/div32/dsr_17" BEL
+        "ALU1/div32/dsr_16" BEL "ALU1/div32/dsr_15" BEL "ALU1/div32/dsr_14"
+        BEL "ALU1/div32/dsr_13" BEL "ALU1/div32/dsr_12" BEL
+        "ALU1/div32/dsr_11" BEL "ALU1/div32/dsr_10" BEL "ALU1/div32/dsr_9" BEL
+        "ALU1/div32/dsr_8" BEL "ALU1/div32/dsr_7" BEL "ALU1/div32/dsr_6" BEL
+        "ALU1/div32/dsr_5" BEL "ALU1/div32/dsr_4" BEL "ALU1/div32/dsr_3" BEL
+        "ALU1/div32/dsr_2" BEL "ALU1/div32/dsr_1" BEL "ALU1/div32/dsr_0" BEL
+        "ALU1/div32/sign" BEL "ALU1/div32/rem_div_63" BEL
+        "ALU1/div32/rem_div_62" BEL "ALU1/div32/rem_div_61" BEL
+        "ALU1/div32/rem_div_60" BEL "ALU1/div32/rem_div_59" BEL
+        "ALU1/div32/rem_div_58" BEL "ALU1/div32/rem_div_57" BEL
+        "ALU1/div32/rem_div_56" BEL "ALU1/div32/rem_div_55" BEL
+        "ALU1/div32/rem_div_54" BEL "ALU1/div32/rem_div_53" BEL
+        "ALU1/div32/rem_div_52" BEL "ALU1/div32/rem_div_51" BEL
+        "ALU1/div32/rem_div_50" BEL "ALU1/div32/rem_div_49" BEL
+        "ALU1/div32/rem_div_48" BEL "ALU1/div32/rem_div_47" BEL
+        "ALU1/div32/rem_div_46" BEL "ALU1/div32/rem_div_45" BEL
+        "ALU1/div32/rem_div_44" BEL "ALU1/div32/rem_div_43" BEL
+        "ALU1/div32/rem_div_42" BEL "ALU1/div32/rem_div_41" BEL
+        "ALU1/div32/rem_div_40" BEL "ALU1/div32/rem_div_39" BEL
+        "ALU1/div32/rem_div_38" BEL "ALU1/div32/rem_div_37" BEL
+        "ALU1/div32/rem_div_36" BEL "ALU1/div32/rem_div_35" BEL
+        "ALU1/div32/rem_div_34" BEL "ALU1/div32/rem_div_33" BEL
+        "ALU1/div32/rem_div_32" BEL "ALU1/div32/rem_div_31" BEL
+        "ALU1/div32/rem_div_30" BEL "ALU1/div32/rem_div_29" BEL
+        "ALU1/div32/rem_div_28" BEL "ALU1/div32/rem_div_27" BEL
+        "ALU1/div32/rem_div_26" BEL "ALU1/div32/rem_div_25" BEL
+        "ALU1/div32/rem_div_24" BEL "ALU1/div32/rem_div_23" BEL
+        "ALU1/div32/rem_div_22" BEL "ALU1/div32/rem_div_21" BEL
+        "ALU1/div32/rem_div_20" BEL "ALU1/div32/rem_div_19" BEL
+        "ALU1/div32/rem_div_18" BEL "ALU1/div32/rem_div_17" BEL
+        "ALU1/div32/rem_div_16" BEL "ALU1/div32/rem_div_15" BEL
+        "ALU1/div32/rem_div_14" BEL "ALU1/div32/rem_div_13" BEL
+        "ALU1/div32/rem_div_12" BEL "ALU1/div32/rem_div_11" BEL
+        "ALU1/div32/rem_div_10" BEL "ALU1/div32/rem_div_9" BEL
+        "ALU1/div32/rem_div_8" BEL "ALU1/div32/rem_div_7" BEL
+        "ALU1/div32/rem_div_6" BEL "ALU1/div32/rem_div_5" BEL
+        "ALU1/div32/rem_div_4" BEL "ALU1/div32/rem_div_3" BEL
+        "ALU1/div32/rem_div_2" BEL "ALU1/div32/rem_div_1" BEL
+        "ALU1/sll32/X_31" BEL "ALU1/sll32/X_30" BEL "ALU1/sll32/X_29" BEL
+        "ALU1/sll32/X_28" BEL "ALU1/sll32/X_27" BEL "ALU1/sll32/X_26" BEL
+        "ALU1/sll32/X_25" BEL "ALU1/sll32/X_24" BEL "ALU1/sll32/X_23" BEL
+        "ALU1/sll32/X_22" BEL "ALU1/sll32/X_21" BEL "ALU1/sll32/X_20" BEL
+        "ALU1/sll32/X_19" BEL "ALU1/sll32/X_18" BEL "ALU1/sll32/X_17" BEL
+        "ALU1/sll32/X_16" BEL "ALU1/sll32/X_15" BEL "ALU1/sll32/X_14" BEL
+        "ALU1/sll32/X_13" BEL "ALU1/sll32/X_12" BEL "ALU1/sll32/X_11" BEL
+        "ALU1/sll32/X_10" BEL "ALU1/sll32/X_9" BEL "ALU1/sll32/X_8" BEL
+        "ALU1/sll32/X_7" BEL "ALU1/sll32/X_6" BEL "ALU1/sll32/X_5" BEL
+        "ALU1/sll32/X_4" BEL "ALU1/sll32/X_3" BEL "ALU1/sll32/X_2" BEL
+        "ALU1/sll32/X_1" BEL "ALU1/sll32/X_0" BEL "ALU1/sll32/Y_4" BEL
+        "ALU1/sll32/Y_3" BEL "ALU1/sll32/Y_2" BEL "ALU1/sll32/Y_1" BEL
+        "ALU1/sll32/Y_0" BEL "ALU1/sll32/flag" BEL "ALU1/sra32/X_31" BEL
+        "ALU1/sra32/X_30" BEL "ALU1/sra32/X_29" BEL "ALU1/sra32/X_28" BEL
+        "ALU1/sra32/X_27" BEL "ALU1/sra32/X_26" BEL "ALU1/sra32/X_25" BEL
+        "ALU1/sra32/X_24" BEL "ALU1/sra32/X_23" BEL "ALU1/sra32/X_22" BEL
+        "ALU1/sra32/X_21" BEL "ALU1/sra32/X_20" BEL "ALU1/sra32/X_19" BEL
+        "ALU1/sra32/X_18" BEL "ALU1/sra32/X_17" BEL "ALU1/sra32/X_16" BEL
+        "ALU1/sra32/X_15" BEL "ALU1/sra32/X_14" BEL "ALU1/sra32/X_13" BEL
+        "ALU1/sra32/X_12" BEL "ALU1/sra32/X_11" BEL "ALU1/sra32/X_10" BEL
+        "ALU1/sra32/X_9" BEL "ALU1/sra32/X_8" BEL "ALU1/sra32/X_7" BEL
+        "ALU1/sra32/X_6" BEL "ALU1/sra32/X_5" BEL "ALU1/sra32/X_4" BEL
+        "ALU1/sra32/X_3" BEL "ALU1/sra32/X_2" BEL "ALU1/sra32/X_1" BEL
+        "ALU1/sra32/X_0" BEL "ALU1/sra32/Y_4" BEL "ALU1/sra32/Y_3" BEL
+        "ALU1/sra32/Y_2" BEL "ALU1/sra32/Y_1" BEL "ALU1/sra32/Y_0" BEL
+        "ALU1/sra32/MSB" BEL "ALU1/sra32/flag" BEL "ALU1/srl32/X_31" BEL
+        "ALU1/srl32/X_30" BEL "ALU1/srl32/X_29" BEL "ALU1/srl32/X_28" BEL
+        "ALU1/srl32/X_27" BEL "ALU1/srl32/X_26" BEL "ALU1/srl32/X_25" BEL
+        "ALU1/srl32/X_24" BEL "ALU1/srl32/X_23" BEL "ALU1/srl32/X_22" BEL
+        "ALU1/srl32/X_21" BEL "ALU1/srl32/X_20" BEL "ALU1/srl32/X_19" BEL
+        "ALU1/srl32/X_18" BEL "ALU1/srl32/X_17" BEL "ALU1/srl32/X_16" BEL
+        "ALU1/srl32/X_15" BEL "ALU1/srl32/X_14" BEL "ALU1/srl32/X_13" BEL
+        "ALU1/srl32/X_12" BEL "ALU1/srl32/X_11" BEL "ALU1/srl32/X_10" BEL
+        "ALU1/srl32/X_9" BEL "ALU1/srl32/X_8" BEL "ALU1/srl32/X_7" BEL
+        "ALU1/srl32/X_6" BEL "ALU1/srl32/X_5" BEL "ALU1/srl32/X_4" BEL
+        "ALU1/srl32/X_3" BEL "ALU1/srl32/X_2" BEL "ALU1/srl32/X_1" BEL
+        "ALU1/srl32/X_0" BEL "ALU1/srl32/Y_4" BEL "ALU1/srl32/Y_3" BEL
+        "ALU1/srl32/Y_2" BEL "ALU1/srl32/Y_1" BEL "ALU1/srl32/Y_0" BEL
+        "ALU1/srl32/flag" BEL "ALU1/Control_SRL" BEL "ALU1/Control_SRA" BEL
+        "ALU1/Control_SLL" BEL "ALU1/EnableD" BEL "ALU1/EnableU" BEL
+        "ALU1/EnableB" BEL "ALU1/EnableDU" BEL "Operand2_3_1" BEL
+        "Operand1_3_1" BEL "Operand1_2_1" BEL "CLOCK_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+PIN RESET_pins<0> = BEL "RESET" PINNAME PAD;
+PIN RESET_ALU_pins<0> = BEL "RESET_ALU" PINNAME PAD;
+PIN "RESET_pins<0>" TIG;
+PIN "RESET_ALU_pins<0>" TIG;
+SCHEMATIC END;
+

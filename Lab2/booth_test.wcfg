@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/CG3207/Lab2/BOOTH_MULT_TEST_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="booth_mult_test" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/booth_mult_test/enableb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enableb</obj_property>
+      <obj_property name="ObjectShortName">enableb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/operand1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">operand1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/operand2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">operand2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/lowerb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">lowerb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">lowerb[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/upperb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">upperb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">upperb[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/uut/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[64:0]</obj_property>
+      <obj_property name="ObjectShortName">a[64:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/uut/s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s[64:0]</obj_property>
+      <obj_property name="ObjectShortName">s[64:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/uut/p" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">p[64:0]</obj_property>
+      <obj_property name="ObjectShortName">p[64:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/uut/temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp[64:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[64:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/booth_mult_test/uut/signal_p" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">signal_p[64:0]</obj_property>
+      <obj_property name="ObjectShortName">signal_p[64:0]</obj_property>
+   </wvobject>
+</wave_config>

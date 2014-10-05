@@ -1,0 +1,2 @@
+vhdl isim_temp "SR_ARITH.vhd"
+vhdl isim_temp "SR_ARITH_TEST.vhd"

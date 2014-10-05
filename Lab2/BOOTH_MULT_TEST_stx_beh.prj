@@ -1,0 +1,2 @@
+vhdl isim_temp "BOOTH_MUL.vhd"
+vhdl isim_temp "BOOTH_MULT_TEST.vhd"

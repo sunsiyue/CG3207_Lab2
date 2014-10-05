@@ -1,0 +1,1630 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\CG3207\Lab2\SUB.vhd" into library work
+Parsing entity <SUB>.
+Parsing architecture <SUB_ARCH> of entity <sub>.
+Parsing VHDL file "C:\CG3207\Lab2\SR_LOGI.vhd" into library work
+Parsing entity <SR_LOGI>.
+Parsing architecture <SR_LOGI> of entity <sr_logi>.
+Parsing VHDL file "C:\CG3207\Lab2\SR_ARITH.vhd" into library work
+Parsing entity <SR_ARITH>.
+Parsing architecture <SR_ARITH_ARCHI> of entity <sr_arith>.
+Parsing VHDL file "C:\CG3207\Lab2\SL_LOGI.vhd" into library work
+Parsing entity <SL_LOGI>.
+Parsing architecture <SL_LOGI> of entity <sl_logi>.
+Parsing VHDL file "C:\CG3207\Lab2\SLTU.vhd" into library work
+Parsing entity <SLTU>.
+Parsing architecture <SLTU_ARCH> of entity <sltu>.
+Parsing VHDL file "C:\CG3207\Lab2\SLT.vhd" into library work
+Parsing entity <SLT>.
+Parsing architecture <SLT_ARCH> of entity <slt>.
+Parsing VHDL file "C:\CG3207\Lab2\MULTU.vhd" into library work
+Parsing entity <MULTU>.
+Parsing architecture <MULTU_ARCH> of entity <multu>.
+Parsing VHDL file "C:\CG3207\Lab2\DIVU.vhd" into library work
+Parsing entity <DIVU>.
+Parsing architecture <DIVU_ARCH> of entity <divu>.
+Parsing VHDL file "C:\CG3207\Lab2\DIV.vhd" into library work
+Parsing entity <DIV>.
+Parsing architecture <DIV_ARCH> of entity <div>.
+Parsing VHDL file "C:\CG3207\Lab2\BOOTH_MUL.vhd" into library work
+Parsing entity <BOOTH_MULT>.
+Parsing architecture <BOOTH_MULT_ARCH> of entity <booth_mult>.
+Parsing VHDL file "C:\CG3207\Lab2\ADD.vhd" into library work
+Parsing entity <ADD>.
+Parsing architecture <ADD_ARCH> of entity <add>.
+Parsing VHDL file "C:\CG3207\Lab2\uart.vhd" into library work
+Parsing entity <UART>.
+Parsing architecture <RTL> of entity <uart>.
+Parsing VHDL file "C:\CG3207\Lab2\alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing entity <adder>.
+Parsing VHDL file "C:\CG3207\Lab2\top.vhd" into library work
+Parsing entity <TOP>.
+Parsing architecture <RTL> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP> (architecture <RTL>) from library <work>.
+
+Elaborating entity <UART> (architecture <RTL>) with generics from library <work>.
+
+Elaborating entity <alu> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ADD> (architecture <ADD_ARCH>) with generics from library <work>.
+
+Elaborating entity <SUB> (architecture <SUB_ARCH>) with generics from library <work>.
+
+Elaborating entity <SLT> (architecture <SLT_ARCH>) with generics from library <work>.
+
+Elaborating entity <SLTU> (architecture <SLTU_ARCH>) with generics from library <work>.
+
+Elaborating entity <BOOTH_MULT> (architecture <BOOTH_MULT_ARCH>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "C:\CG3207\Lab2\BOOTH_MUL.vhd" Line 48: Net <A[32]> does not have a driver.
+
+Elaborating entity <MULTU> (architecture <MULTU_ARCH>) with generics from library <work>.
+
+Elaborating entity <DIVU> (architecture <DIVU_ARCH>) with generics from library <work>.
+
+Elaborating entity <DIV> (architecture <DIV_ARCH>) with generics from library <work>.
+
+Elaborating entity <SL_LOGI> (architecture <SL_LOGI>) with generics from library <work>.
+
+Elaborating entity <SR_ARITH> (architecture <SR_ARITH_ARCHI>) with generics from library <work>.
+
+Elaborating entity <SR_LOGI> (architecture <SR_LOGI>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:\CG3207\Lab2\top.vhd".
+    Found 1-bit register for signal <uart_data_out_ack>.
+    Found 8-bit register for signal <uart_data_in>.
+    Found 2-bit register for signal <state>.
+    Found 32-bit register for signal <Operand1>.
+    Found 32-bit register for signal <Operand2>.
+    Found 1-bit register for signal <Control<4>>.
+    Found 1-bit register for signal <Control<3>>.
+    Found 1-bit register for signal <Control<2>>.
+    Found 1-bit register for signal <Control<1>>.
+    Found 1-bit register for signal <Control<0>>.
+    Found 1-bit register for signal <uart_data_out_stb_prev>.
+    Found 5-bit register for signal <bytecounter>.
+    Found 115-bit register for signal <storage>.
+    Found 16-bit register for signal <cyclecounter>.
+    Found 1-bit register for signal <uart_data_in_stb>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 4                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | waiting                                        |
+    | Power Up State     | waiting                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit adder for signal <bytecounter[4]_GND_5_o_add_6_OUT> created at line 197.
+    Found 16-bit adder for signal <cyclecounter[15]_GND_5_o_add_100_OUT> created at line 241.
+    Found 1-bit 4-to-1 multiplexer for signal <state[1]_uart_data_out_stb_Mux_114_o> created at line 181.
+    Found 5-bit 4-to-1 multiplexer for signal <state[1]_bytecounter[4]_wide_mux_115_OUT> created at line 181.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 216 D-type flip-flop(s).
+	inferred 178 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <TOP> synthesized.
+
+Synthesizing Unit <UART>.
+    Related source file is "C:\CG3207\Lab2\uart.vhd".
+        BAUD_RATE = 115200
+        CLOCK_FREQUENCY = 100000000
+    Found 1-bit register for signal <uart_tx_data>.
+    Found 1-bit register for signal <uart_rx_bit>.
+    Found 1-bit register for signal <uart_rx_data_in_ack>.
+    Found 1-bit register for signal <oversample_baud_tick>.
+    Found 1-bit register for signal <uart_rx_data_out_stb>.
+    Found 2-bit register for signal <uart_rx_filter>.
+    Found 4-bit register for signal <baud_counter>.
+    Found 8-bit register for signal <uart_tx_data_block>.
+    Found 8-bit register for signal <uart_rx_data_block>.
+    Found 3-bit register for signal <uart_tx_count>.
+    Found 3-bit register for signal <uart_tx_state>.
+    Found 3-bit register for signal <uart_rx_count>.
+    Found 6-bit register for signal <oversample_baud_counter>.
+    Found 2-bit register for signal <uart_rx_state>.
+    Found 4-bit register for signal <uart_rx_sync_clock>.
+    Found finite state machine <FSM_1> for signal <uart_tx_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <uart_rx_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | rx_wait_start_synchronise                      |
+    | Power Up State     | rx_wait_start_synchronise                      |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <uart_tx_count[2]_GND_8_o_add_12_OUT> created at line 1241.
+    Found 2-bit adder for signal <uart_rx_filter[1]_GND_8_o_add_32_OUT> created at line 1241.
+    Found 3-bit adder for signal <uart_rx_count[2]_GND_8_o_add_47_OUT> created at line 1241.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_2_OUT<3:0>> created at line 1308.
+    Found 6-bit subtractor for signal <GND_8_o_GND_8_o_sub_28_OUT<5:0>> created at line 1308.
+    Found 2-bit subtractor for signal <GND_8_o_GND_8_o_sub_35_OUT<1:0>> created at line 1308.
+    Found 4-bit comparator equal for signal <uart_rx_sync_clock[3]_baud_counter[3]_equal_31_o> created at line 274
+    Found 2-bit comparator greater for signal <uart_rx_filter[1]_PWR_8_o_LessThan_32_o> created at line 292
+    Found 2-bit comparator greater for signal <GND_8_o_uart_rx_filter[1]_LessThan_34_o> created at line 294
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   8 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <UART> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "C:\CG3207\Lab2\alu.vhd".
+        width = 32
+    Found 1-bit register for signal <done>.
+    Found 8-bit register for signal <MULTI_CYCLE_PROCESS.count>.
+    Found 1-bit register for signal <EnableB>.
+    Found 32-bit register for signal <Result1_multi>.
+    Found 32-bit register for signal <Result2_multi>.
+    Found 32-bit register for signal <Debug_multi>.
+    Found 1-bit register for signal <EnableU>.
+    Found 1-bit register for signal <EnableDU>.
+    Found 1-bit register for signal <EnableD>.
+    Found 1-bit register for signal <Control_SLL>.
+    Found 1-bit register for signal <Control_SRA>.
+    Found 1-bit register for signal <Control_SRL>.
+    Found 1-bit register for signal <state>.
+    Found 8-bit adder for signal <MULTI_CYCLE_PROCESS.count[7]_GND_10_o_add_39_OUT> created at line 488.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 113 D-type flip-flop(s).
+	inferred  47 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <ADD>.
+    Related source file is "C:\CG3207\Lab2\ADD.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 33-bit adder for signal <temp> created at line 53.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <ADD> synthesized.
+
+Synthesizing Unit <SUB>.
+    Related source file is "C:\CG3207\Lab2\SUB.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit adder for signal <n0022> created at line 54.
+    Found 32-bit adder for signal <Result_SUB> created at line 54.
+    Found 32-bit adder for signal <temp_sum> created at line 55.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <SUB> synthesized.
+
+Synthesizing Unit <SLT>.
+    Related source file is "C:\CG3207\Lab2\SLT.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit subtractor for signal <diff> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <SLT> synthesized.
+
+Synthesizing Unit <SLTU>.
+    Related source file is "C:\CG3207\Lab2\SLTU.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit comparator greater for signal <Operand1[31]_Operand2[31]_LessThan_1_o> created at line 55
+    Summary:
+	inferred   1 Comparator(s).
+Unit <SLTU> synthesized.
+
+Synthesizing Unit <BOOTH_MULT>.
+    Related source file is "C:\CG3207\Lab2\BOOTH_MUL.vhd".
+        width = 32
+WARNING:Xst:2935 - Signal 'A<32:0>', unconnected in block 'BOOTH_MULT', is tied to its initial value (000000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'S<32:0>', unconnected in block 'BOOTH_MULT', is tied to its initial value (000000000000000000000000000000000).
+    Found 1-bit register for signal <A<64>>.
+    Found 1-bit register for signal <A<63>>.
+    Found 1-bit register for signal <A<62>>.
+    Found 1-bit register for signal <A<61>>.
+    Found 1-bit register for signal <A<60>>.
+    Found 1-bit register for signal <A<59>>.
+    Found 1-bit register for signal <A<58>>.
+    Found 1-bit register for signal <A<57>>.
+    Found 1-bit register for signal <A<56>>.
+    Found 1-bit register for signal <A<55>>.
+    Found 1-bit register for signal <A<54>>.
+    Found 1-bit register for signal <A<53>>.
+    Found 1-bit register for signal <A<52>>.
+    Found 1-bit register for signal <A<51>>.
+    Found 1-bit register for signal <A<50>>.
+    Found 1-bit register for signal <A<49>>.
+    Found 1-bit register for signal <A<48>>.
+    Found 1-bit register for signal <A<47>>.
+    Found 1-bit register for signal <A<46>>.
+    Found 1-bit register for signal <A<45>>.
+    Found 1-bit register for signal <A<44>>.
+    Found 1-bit register for signal <A<43>>.
+    Found 1-bit register for signal <A<42>>.
+    Found 1-bit register for signal <A<41>>.
+    Found 1-bit register for signal <A<40>>.
+    Found 1-bit register for signal <A<39>>.
+    Found 1-bit register for signal <A<38>>.
+    Found 1-bit register for signal <A<37>>.
+    Found 1-bit register for signal <A<36>>.
+    Found 1-bit register for signal <A<35>>.
+    Found 1-bit register for signal <A<34>>.
+    Found 1-bit register for signal <A<33>>.
+    Found 1-bit register for signal <S<64>>.
+    Found 1-bit register for signal <S<63>>.
+    Found 1-bit register for signal <S<62>>.
+    Found 1-bit register for signal <S<61>>.
+    Found 1-bit register for signal <S<60>>.
+    Found 1-bit register for signal <S<59>>.
+    Found 1-bit register for signal <S<58>>.
+    Found 1-bit register for signal <S<57>>.
+    Found 1-bit register for signal <S<56>>.
+    Found 1-bit register for signal <S<55>>.
+    Found 1-bit register for signal <S<54>>.
+    Found 1-bit register for signal <S<53>>.
+    Found 1-bit register for signal <S<52>>.
+    Found 1-bit register for signal <S<51>>.
+    Found 1-bit register for signal <S<50>>.
+    Found 1-bit register for signal <S<49>>.
+    Found 1-bit register for signal <S<48>>.
+    Found 1-bit register for signal <S<47>>.
+    Found 1-bit register for signal <S<46>>.
+    Found 1-bit register for signal <S<45>>.
+    Found 1-bit register for signal <S<44>>.
+    Found 1-bit register for signal <S<43>>.
+    Found 1-bit register for signal <S<42>>.
+    Found 1-bit register for signal <S<41>>.
+    Found 1-bit register for signal <S<40>>.
+    Found 1-bit register for signal <S<39>>.
+    Found 1-bit register for signal <S<38>>.
+    Found 1-bit register for signal <S<37>>.
+    Found 1-bit register for signal <S<36>>.
+    Found 1-bit register for signal <S<35>>.
+    Found 1-bit register for signal <S<34>>.
+    Found 1-bit register for signal <S<33>>.
+    Found 32-bit register for signal <UpperB>.
+    Found 32-bit register for signal <LowerB>.
+    Found 65-bit register for signal <P>.
+    Found 65-bit adder for signal <P[64]_A[64]_add_0_OUT> created at line 56.
+    Found 65-bit adder for signal <P[64]_S[64]_add_1_OUT> created at line 58.
+    Found 32-bit adder for signal <Operand1[31]_GND_17_o_add_4_OUT> created at line 65.
+    Found 65-bit 4-to-1 multiplexer for signal <n0144> created at line 54.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 193 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <BOOTH_MULT> synthesized.
+
+Synthesizing Unit <MULTU>.
+    Related source file is "C:\CG3207\Lab2\MULTU.vhd".
+        width = 32
+    Found 32-bit register for signal <UpperU>.
+    Found 32-bit register for signal <LowerU>.
+    Found 65-bit register for signal <temp_sum>.
+    Found 33-bit adder for signal <temp_sum[64]_GND_18_o_add_0_OUT> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 129 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <MULTU> synthesized.
+
+Synthesizing Unit <DIVU>.
+    Related source file is "C:\CG3207\Lab2\DIVU.vhd".
+        width = 32
+    Found 32-bit register for signal <QuotientDU>.
+    Found 32-bit register for signal <RemainderDU>.
+    Found 64-bit register for signal <rem_div<63:0>>.
+    Found 33-bit subtractor for signal <GND_19_o_GND_19_o_sub_1_OUT<32:0>> created at line 57.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 128 D-type flip-flop(s).
+	inferred  33 Multiplexer(s).
+Unit <DIVU> synthesized.
+
+Synthesizing Unit <DIV>.
+    Related source file is "C:\CG3207\Lab2\DIV.vhd".
+        width = 32
+    Found 1-bit register for signal <sign>.
+    Found 32-bit register for signal <dsr>.
+    Found 32-bit register for signal <QuotientD>.
+    Found 32-bit register for signal <RemainderD>.
+    Found 64-bit register for signal <rem_div<63:0>>.
+    Found 32-bit adder for signal <GND_20_o_dsr[31]_add_1_OUT> created at line 62.
+    Found 65-bit adder for signal <GND_20_o_GND_20_o_add_3_OUT> created at line 68.
+    Found 32-bit adder for signal <Operand1[31]_GND_20_o_add_6_OUT> created at line 75.
+    Found 32-bit adder for signal <Operand2[31]_GND_20_o_add_9_OUT> created at line 80.
+    Found 32-bit subtractor for signal <n0081> created at line 0.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 161 D-type flip-flop(s).
+	inferred  37 Multiplexer(s).
+Unit <DIV> synthesized.
+
+Synthesizing Unit <SL_LOGI>.
+    Related source file is "C:\CG3207\Lab2\SL_LOGI.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Operand2<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <X>.
+    Found 1-bit register for signal <flag>.
+    Found 32-bit register for signal <Output_SLL>.
+    Found 5-bit register for signal <Y>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <SL_LOGI> synthesized.
+
+Synthesizing Unit <SR_ARITH>.
+    Related source file is "C:\CG3207\Lab2\SR_ARITH.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Operand2<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit register for signal <Y>.
+    Found 32-bit register for signal <X>.
+    Found 1-bit register for signal <flag>.
+    Found 32-bit register for signal <Output_SRA>.
+    Found 1-bit register for signal <MSB>.
+    Summary:
+	inferred  71 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <SR_ARITH> synthesized.
+
+Synthesizing Unit <SR_LOGI>.
+    Related source file is "C:\CG3207\Lab2\SR_LOGI.vhd".
+        width = 32
+WARNING:Xst:647 - Input <Operand2<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <X>.
+    Found 1-bit register for signal <flag>.
+    Found 32-bit register for signal <Output_SRL>.
+    Found 5-bit register for signal <Y>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <SR_LOGI> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 1
+ 2-bit addsub                                          : 1
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 7
+ 32-bit subtractor                                     : 2
+ 33-bit adder                                          : 2
+ 33-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+ 6-bit subtractor                                      : 1
+ 65-bit adder                                          : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 100
+ 1-bit register                                        : 59
+ 115-bit register                                      : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 21
+ 4-bit register                                        : 2
+ 5-bit register                                        : 4
+ 6-bit register                                        : 1
+ 64-bit register                                       : 2
+ 65-bit register                                       : 2
+ 8-bit register                                        : 4
+# Comparators                                          : 4
+ 2-bit comparator greater                              : 2
+ 32-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 383
+ 1-bit 2-to-1 multiplexer                              : 275
+ 1-bit 4-to-1 multiplexer                              : 1
+ 115-bit 2-to-1 multiplexer                            : 3
+ 16-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 60
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 9
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 1
+ 65-bit 2-to-1 multiplexer                             : 9
+ 8-bit 2-to-1 multiplexer                              : 18
+# FSMs                                                 : 3
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <P_7> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_6> 
+INFO:Xst:2261 - The FF/Latch <P_8> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_7> 
+INFO:Xst:2261 - The FF/Latch <P_9> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_8> 
+INFO:Xst:2261 - The FF/Latch <P_10> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_9> 
+INFO:Xst:2261 - The FF/Latch <P_11> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_10> 
+INFO:Xst:2261 - The FF/Latch <P_12> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_11> 
+INFO:Xst:2261 - The FF/Latch <P_13> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_12> 
+INFO:Xst:2261 - The FF/Latch <P_14> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_13> 
+INFO:Xst:2261 - The FF/Latch <P_15> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_14> 
+INFO:Xst:2261 - The FF/Latch <P_20> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_19> 
+INFO:Xst:2261 - The FF/Latch <P_16> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_15> 
+INFO:Xst:2261 - The FF/Latch <P_21> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_20> 
+INFO:Xst:2261 - The FF/Latch <P_17> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_16> 
+INFO:Xst:2261 - The FF/Latch <P_22> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_21> 
+INFO:Xst:2261 - The FF/Latch <P_18> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_17> 
+INFO:Xst:2261 - The FF/Latch <P_23> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_22> 
+INFO:Xst:2261 - The FF/Latch <P_19> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_18> 
+INFO:Xst:2261 - The FF/Latch <P_24> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_23> 
+INFO:Xst:2261 - The FF/Latch <P_25> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_24> 
+INFO:Xst:2261 - The FF/Latch <P_30> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_29> 
+INFO:Xst:2261 - The FF/Latch <P_26> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_25> 
+INFO:Xst:2261 - The FF/Latch <P_31> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_30> 
+INFO:Xst:2261 - The FF/Latch <P_27> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_26> 
+INFO:Xst:2261 - The FF/Latch <P_32> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_31> 
+INFO:Xst:2261 - The FF/Latch <P_28> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_27> 
+INFO:Xst:2261 - The FF/Latch <P_33> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_0> 
+INFO:Xst:2261 - The FF/Latch <P_29> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_28> 
+INFO:Xst:2261 - The FF/Latch <P_34> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_1> 
+INFO:Xst:2261 - The FF/Latch <P_35> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_2> 
+INFO:Xst:2261 - The FF/Latch <P_40> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_7> 
+INFO:Xst:2261 - The FF/Latch <P_36> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_3> 
+INFO:Xst:2261 - The FF/Latch <P_41> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_8> 
+INFO:Xst:2261 - The FF/Latch <P_37> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_4> 
+INFO:Xst:2261 - The FF/Latch <P_42> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_9> 
+INFO:Xst:2261 - The FF/Latch <P_38> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_5> 
+INFO:Xst:2261 - The FF/Latch <P_43> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_10> 
+INFO:Xst:2261 - The FF/Latch <P_39> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_6> 
+INFO:Xst:2261 - The FF/Latch <P_44> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_11> 
+INFO:Xst:2261 - The FF/Latch <P_45> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_12> 
+INFO:Xst:2261 - The FF/Latch <P_50> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_17> 
+INFO:Xst:2261 - The FF/Latch <P_46> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_13> 
+INFO:Xst:2261 - The FF/Latch <P_51> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_18> 
+INFO:Xst:2261 - The FF/Latch <P_47> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_14> 
+INFO:Xst:2261 - The FF/Latch <P_52> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_19> 
+INFO:Xst:2261 - The FF/Latch <P_48> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_15> 
+INFO:Xst:2261 - The FF/Latch <P_53> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_20> 
+INFO:Xst:2261 - The FF/Latch <P_49> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_16> 
+INFO:Xst:2261 - The FF/Latch <P_54> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_21> 
+INFO:Xst:2261 - The FF/Latch <P_55> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_22> 
+INFO:Xst:2261 - The FF/Latch <P_60> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_27> 
+INFO:Xst:2261 - The FF/Latch <P_56> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_23> 
+INFO:Xst:2261 - The FF/Latch <P_61> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_28> 
+INFO:Xst:2261 - The FF/Latch <P_57> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_24> 
+INFO:Xst:2261 - The FF/Latch <P_62> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_29> 
+INFO:Xst:2261 - The FF/Latch <P_58> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_25> 
+INFO:Xst:2261 - The FF/Latch <P_63> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_30> 
+INFO:Xst:2261 - The FF/Latch <P_59> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_26> 
+INFO:Xst:2261 - The FF/Latch <P_64> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <UpperB_31> 
+INFO:Xst:2261 - The FF/Latch <P_1> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_0> 
+INFO:Xst:2261 - The FF/Latch <P_2> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_1> 
+INFO:Xst:2261 - The FF/Latch <P_3> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_2> 
+INFO:Xst:2261 - The FF/Latch <P_4> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_3> 
+INFO:Xst:2261 - The FF/Latch <P_5> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_4> 
+INFO:Xst:2261 - The FF/Latch <P_6> in Unit <multb32> is equivalent to the following FF/Latch, which will be removed : <LowerB_5> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_10> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_10> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_0> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_0> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_11> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_11> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_1> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_1> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_12> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_12> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_2> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_2> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_13> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_13> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_3> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_3> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_14> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_14> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_4> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_4> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_15> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_15> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_20> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_20> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_5> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_5> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_16> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_16> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_21> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_21> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_6> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_6> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_17> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_17> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_22> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_22> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_7> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_7> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_18> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_18> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_23> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_23> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_8> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_8> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_19> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_19> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_24> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_24> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_9> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_9> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_25> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_25> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_30> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_30> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_26> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_26> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_31> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_31> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_27> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_27> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_32> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_0> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_28> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_28> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_33> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_1> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_29> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <LowerU_29> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_34> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_2> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_35> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_3> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_40> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_8> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_36> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_4> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_41> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_9> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_37> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_5> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_42> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_10> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_38> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_6> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_43> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_11> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_39> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_7> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_44> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_12> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_45> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_13> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_50> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_18> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_46> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_14> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_51> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_19> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_47> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_15> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_52> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_20> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_48> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_16> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_53> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_21> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_49> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_17> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_54> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_22> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_55> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_23> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_60> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_28> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_56> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_24> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_61> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_29> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_57> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_25> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_62> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_30> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_58> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_26> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_63> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_31> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_59> in Unit <multu32> is equivalent to the following FF/Latch, which will be removed : <UpperU_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_15> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_15> 
+INFO:Xst:2261 - The FF/Latch <rem_div_20> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_20> 
+INFO:Xst:2261 - The FF/Latch <rem_div_16> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_16> 
+INFO:Xst:2261 - The FF/Latch <rem_div_21> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_21> 
+INFO:Xst:2261 - The FF/Latch <rem_div_17> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_17> 
+INFO:Xst:2261 - The FF/Latch <rem_div_22> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_22> 
+INFO:Xst:2261 - The FF/Latch <rem_div_18> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_18> 
+INFO:Xst:2261 - The FF/Latch <rem_div_23> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_23> 
+INFO:Xst:2261 - The FF/Latch <rem_div_19> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_19> 
+INFO:Xst:2261 - The FF/Latch <rem_div_24> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_24> 
+INFO:Xst:2261 - The FF/Latch <rem_div_25> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_25> 
+INFO:Xst:2261 - The FF/Latch <rem_div_30> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_30> 
+INFO:Xst:2261 - The FF/Latch <rem_div_26> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_26> 
+INFO:Xst:2261 - The FF/Latch <rem_div_31> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_31> 
+INFO:Xst:2261 - The FF/Latch <rem_div_0> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_0> 
+INFO:Xst:2261 - The FF/Latch <rem_div_27> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_1> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_1> 
+INFO:Xst:2261 - The FF/Latch <rem_div_28> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_28> 
+INFO:Xst:2261 - The FF/Latch <rem_div_33> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_0> 
+INFO:Xst:2261 - The FF/Latch <rem_div_2> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_2> 
+INFO:Xst:2261 - The FF/Latch <rem_div_29> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_29> 
+INFO:Xst:2261 - The FF/Latch <rem_div_34> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_1> 
+INFO:Xst:2261 - The FF/Latch <rem_div_3> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_3> 
+INFO:Xst:2261 - The FF/Latch <rem_div_35> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_2> 
+INFO:Xst:2261 - The FF/Latch <rem_div_40> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_7> 
+INFO:Xst:2261 - The FF/Latch <rem_div_4> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_4> 
+INFO:Xst:2261 - The FF/Latch <rem_div_36> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_3> 
+INFO:Xst:2261 - The FF/Latch <rem_div_41> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_8> 
+INFO:Xst:2261 - The FF/Latch <rem_div_5> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_5> 
+INFO:Xst:2261 - The FF/Latch <rem_div_37> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_4> 
+INFO:Xst:2261 - The FF/Latch <rem_div_42> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_9> 
+INFO:Xst:2261 - The FF/Latch <rem_div_6> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_6> 
+INFO:Xst:2261 - The FF/Latch <rem_div_38> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_5> 
+INFO:Xst:2261 - The FF/Latch <rem_div_43> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_10> 
+INFO:Xst:2261 - The FF/Latch <rem_div_7> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_7> 
+INFO:Xst:2261 - The FF/Latch <rem_div_39> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_6> 
+INFO:Xst:2261 - The FF/Latch <rem_div_44> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_11> 
+INFO:Xst:2261 - The FF/Latch <rem_div_8> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_8> 
+INFO:Xst:2261 - The FF/Latch <rem_div_45> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_12> 
+INFO:Xst:2261 - The FF/Latch <rem_div_50> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_17> 
+INFO:Xst:2261 - The FF/Latch <rem_div_9> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_9> 
+INFO:Xst:2261 - The FF/Latch <rem_div_46> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_13> 
+INFO:Xst:2261 - The FF/Latch <rem_div_51> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_18> 
+INFO:Xst:2261 - The FF/Latch <rem_div_47> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_14> 
+INFO:Xst:2261 - The FF/Latch <rem_div_52> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_19> 
+INFO:Xst:2261 - The FF/Latch <rem_div_48> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_15> 
+INFO:Xst:2261 - The FF/Latch <rem_div_53> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_20> 
+INFO:Xst:2261 - The FF/Latch <rem_div_49> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_16> 
+INFO:Xst:2261 - The FF/Latch <rem_div_54> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_21> 
+INFO:Xst:2261 - The FF/Latch <rem_div_55> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_22> 
+INFO:Xst:2261 - The FF/Latch <rem_div_60> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_56> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_23> 
+INFO:Xst:2261 - The FF/Latch <rem_div_61> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_28> 
+INFO:Xst:2261 - The FF/Latch <rem_div_57> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_24> 
+INFO:Xst:2261 - The FF/Latch <rem_div_62> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_29> 
+INFO:Xst:2261 - The FF/Latch <rem_div_58> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_25> 
+INFO:Xst:2261 - The FF/Latch <rem_div_63> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_30> 
+INFO:Xst:2261 - The FF/Latch <rem_div_59> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_26> 
+INFO:Xst:2261 - The FF/Latch <rem_div_10> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_10> 
+INFO:Xst:2261 - The FF/Latch <rem_div_11> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_11> 
+INFO:Xst:2261 - The FF/Latch <rem_div_12> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_12> 
+INFO:Xst:2261 - The FF/Latch <rem_div_13> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_13> 
+INFO:Xst:2261 - The FF/Latch <rem_div_14> in Unit <divu32> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_14> 
+INFO:Xst:2261 - The FF/Latch <rem_div_33> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_0> 
+INFO:Xst:2261 - The FF/Latch <rem_div_34> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_1> 
+INFO:Xst:2261 - The FF/Latch <rem_div_35> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_2> 
+INFO:Xst:2261 - The FF/Latch <rem_div_40> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_7> 
+INFO:Xst:2261 - The FF/Latch <rem_div_36> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_3> 
+INFO:Xst:2261 - The FF/Latch <rem_div_41> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_8> 
+INFO:Xst:2261 - The FF/Latch <rem_div_37> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_4> 
+INFO:Xst:2261 - The FF/Latch <rem_div_42> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_9> 
+INFO:Xst:2261 - The FF/Latch <rem_div_38> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_5> 
+INFO:Xst:2261 - The FF/Latch <rem_div_43> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_10> 
+INFO:Xst:2261 - The FF/Latch <rem_div_39> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_6> 
+INFO:Xst:2261 - The FF/Latch <rem_div_44> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_11> 
+INFO:Xst:2261 - The FF/Latch <rem_div_45> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_12> 
+INFO:Xst:2261 - The FF/Latch <rem_div_50> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_17> 
+INFO:Xst:2261 - The FF/Latch <rem_div_46> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_13> 
+INFO:Xst:2261 - The FF/Latch <rem_div_51> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_18> 
+INFO:Xst:2261 - The FF/Latch <rem_div_47> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_14> 
+INFO:Xst:2261 - The FF/Latch <rem_div_52> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_19> 
+INFO:Xst:2261 - The FF/Latch <rem_div_48> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_15> 
+INFO:Xst:2261 - The FF/Latch <rem_div_53> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_20> 
+INFO:Xst:2261 - The FF/Latch <rem_div_49> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_16> 
+INFO:Xst:2261 - The FF/Latch <rem_div_54> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_21> 
+INFO:Xst:2261 - The FF/Latch <rem_div_55> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_22> 
+INFO:Xst:2261 - The FF/Latch <rem_div_60> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_56> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_23> 
+INFO:Xst:2261 - The FF/Latch <rem_div_61> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_28> 
+INFO:Xst:2261 - The FF/Latch <rem_div_57> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_24> 
+INFO:Xst:2261 - The FF/Latch <rem_div_62> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_29> 
+INFO:Xst:2261 - The FF/Latch <rem_div_58> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_25> 
+INFO:Xst:2261 - The FF/Latch <rem_div_63> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_30> 
+INFO:Xst:2261 - The FF/Latch <rem_div_59> in Unit <div32> is equivalent to the following FF/Latch, which will be removed : <RemainderD_26> 
+INFO:Xst:2261 - The FF/Latch <X_2> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_2> 
+INFO:Xst:2261 - The FF/Latch <X_3> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_3> 
+INFO:Xst:2261 - The FF/Latch <X_4> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_4> 
+INFO:Xst:2261 - The FF/Latch <X_5> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_5> 
+INFO:Xst:2261 - The FF/Latch <X_6> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_6> 
+INFO:Xst:2261 - The FF/Latch <X_7> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_7> 
+INFO:Xst:2261 - The FF/Latch <X_10> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_10> 
+INFO:Xst:2261 - The FF/Latch <X_8> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_8> 
+INFO:Xst:2261 - The FF/Latch <X_11> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_11> 
+INFO:Xst:2261 - The FF/Latch <X_9> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_9> 
+INFO:Xst:2261 - The FF/Latch <X_12> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_12> 
+INFO:Xst:2261 - The FF/Latch <X_13> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_13> 
+INFO:Xst:2261 - The FF/Latch <X_14> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_14> 
+INFO:Xst:2261 - The FF/Latch <X_15> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_15> 
+INFO:Xst:2261 - The FF/Latch <X_20> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_20> 
+INFO:Xst:2261 - The FF/Latch <X_16> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_16> 
+INFO:Xst:2261 - The FF/Latch <X_21> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_21> 
+INFO:Xst:2261 - The FF/Latch <X_17> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_17> 
+INFO:Xst:2261 - The FF/Latch <X_22> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_22> 
+INFO:Xst:2261 - The FF/Latch <X_18> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_18> 
+INFO:Xst:2261 - The FF/Latch <X_23> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_23> 
+INFO:Xst:2261 - The FF/Latch <X_19> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_19> 
+INFO:Xst:2261 - The FF/Latch <X_24> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_24> 
+INFO:Xst:2261 - The FF/Latch <X_25> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_25> 
+INFO:Xst:2261 - The FF/Latch <X_30> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_30> 
+INFO:Xst:2261 - The FF/Latch <X_26> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_26> 
+INFO:Xst:2261 - The FF/Latch <X_31> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_31> 
+INFO:Xst:2261 - The FF/Latch <X_27> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_27> 
+INFO:Xst:2261 - The FF/Latch <X_28> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_28> 
+INFO:Xst:2261 - The FF/Latch <X_29> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_29> 
+INFO:Xst:2261 - The FF/Latch <X_0> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_0> 
+INFO:Xst:2261 - The FF/Latch <X_1> in Unit <sll32> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_1> 
+INFO:Xst:2261 - The FF/Latch <X_2> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_2> 
+INFO:Xst:2261 - The FF/Latch <X_3> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_3> 
+INFO:Xst:2261 - The FF/Latch <X_4> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_4> 
+INFO:Xst:2261 - The FF/Latch <X_5> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_5> 
+INFO:Xst:2261 - The FF/Latch <X_6> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_6> 
+INFO:Xst:2261 - The FF/Latch <X_7> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_7> 
+INFO:Xst:2261 - The FF/Latch <X_10> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_10> 
+INFO:Xst:2261 - The FF/Latch <X_8> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_8> 
+INFO:Xst:2261 - The FF/Latch <X_11> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_11> 
+INFO:Xst:2261 - The FF/Latch <X_9> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_9> 
+INFO:Xst:2261 - The FF/Latch <X_12> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_12> 
+INFO:Xst:2261 - The FF/Latch <X_13> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_13> 
+INFO:Xst:2261 - The FF/Latch <X_14> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_14> 
+INFO:Xst:2261 - The FF/Latch <X_15> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_15> 
+INFO:Xst:2261 - The FF/Latch <X_20> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_20> 
+INFO:Xst:2261 - The FF/Latch <X_16> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_16> 
+INFO:Xst:2261 - The FF/Latch <X_21> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_21> 
+INFO:Xst:2261 - The FF/Latch <X_17> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_17> 
+INFO:Xst:2261 - The FF/Latch <X_22> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_22> 
+INFO:Xst:2261 - The FF/Latch <X_18> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_18> 
+INFO:Xst:2261 - The FF/Latch <X_23> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_23> 
+INFO:Xst:2261 - The FF/Latch <X_19> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_19> 
+INFO:Xst:2261 - The FF/Latch <X_24> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_24> 
+INFO:Xst:2261 - The FF/Latch <X_25> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_25> 
+INFO:Xst:2261 - The FF/Latch <X_30> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_30> 
+INFO:Xst:2261 - The FF/Latch <X_26> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_26> 
+INFO:Xst:2261 - The FF/Latch <X_31> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_31> 
+INFO:Xst:2261 - The FF/Latch <X_27> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_27> 
+INFO:Xst:2261 - The FF/Latch <X_28> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_28> 
+INFO:Xst:2261 - The FF/Latch <X_29> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_29> 
+INFO:Xst:2261 - The FF/Latch <X_0> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_0> 
+INFO:Xst:2261 - The FF/Latch <X_1> in Unit <sra32> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_1> 
+INFO:Xst:2261 - The FF/Latch <X_2> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_2> 
+INFO:Xst:2261 - The FF/Latch <X_3> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_3> 
+INFO:Xst:2261 - The FF/Latch <X_4> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_4> 
+INFO:Xst:2261 - The FF/Latch <X_5> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_5> 
+INFO:Xst:2261 - The FF/Latch <X_6> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_6> 
+INFO:Xst:2261 - The FF/Latch <X_7> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_7> 
+INFO:Xst:2261 - The FF/Latch <X_10> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_10> 
+INFO:Xst:2261 - The FF/Latch <X_8> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_8> 
+INFO:Xst:2261 - The FF/Latch <X_11> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_11> 
+INFO:Xst:2261 - The FF/Latch <X_9> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_9> 
+INFO:Xst:2261 - The FF/Latch <X_12> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_12> 
+INFO:Xst:2261 - The FF/Latch <X_13> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_13> 
+INFO:Xst:2261 - The FF/Latch <X_14> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_14> 
+INFO:Xst:2261 - The FF/Latch <X_15> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_15> 
+INFO:Xst:2261 - The FF/Latch <X_20> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_20> 
+INFO:Xst:2261 - The FF/Latch <X_16> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_16> 
+INFO:Xst:2261 - The FF/Latch <X_21> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_21> 
+INFO:Xst:2261 - The FF/Latch <X_17> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_17> 
+INFO:Xst:2261 - The FF/Latch <X_22> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_22> 
+INFO:Xst:2261 - The FF/Latch <X_18> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_18> 
+INFO:Xst:2261 - The FF/Latch <X_23> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_23> 
+INFO:Xst:2261 - The FF/Latch <X_19> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_19> 
+INFO:Xst:2261 - The FF/Latch <X_24> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_24> 
+INFO:Xst:2261 - The FF/Latch <X_25> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_25> 
+INFO:Xst:2261 - The FF/Latch <X_30> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_30> 
+INFO:Xst:2261 - The FF/Latch <X_26> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_26> 
+INFO:Xst:2261 - The FF/Latch <X_31> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_31> 
+INFO:Xst:2261 - The FF/Latch <X_27> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_27> 
+INFO:Xst:2261 - The FF/Latch <X_28> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_28> 
+INFO:Xst:2261 - The FF/Latch <X_29> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_29> 
+INFO:Xst:2261 - The FF/Latch <X_0> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_0> 
+INFO:Xst:2261 - The FF/Latch <X_1> in Unit <srl32> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_1> 
+
+Synthesizing (advanced) Unit <TOP>.
+The following registers are absorbed into counter <cyclecounter>: 1 register on signal <cyclecounter>.
+Unit <TOP> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART>.
+The following registers are absorbed into counter <uart_rx_filter>: 1 register on signal <uart_rx_filter>.
+The following registers are absorbed into counter <uart_tx_count>: 1 register on signal <uart_tx_count>.
+The following registers are absorbed into counter <uart_rx_count>: 1 register on signal <uart_rx_count>.
+Unit <UART> synthesized (advanced).
+
+Synthesizing (advanced) Unit <alu>.
+The following registers are absorbed into counter <MULTI_CYCLE_PROCESS.count>: 1 register on signal <MULTI_CYCLE_PROCESS.count>.
+Unit <alu> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 32-bit adder                                          : 6
+ 32-bit adder carry in                                 : 1
+ 32-bit subtractor                                     : 2
+ 33-bit adder                                          : 1
+ 33-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+ 6-bit subtractor                                      : 1
+ 65-bit adder                                          : 2
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 2-bit updown counter                                  : 1
+ 3-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 1162
+ Flip-Flops                                            : 1162
+# Comparators                                          : 4
+ 2-bit comparator greater                              : 2
+ 32-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 510
+ 1-bit 2-to-1 multiplexer                              : 406
+ 1-bit 4-to-1 multiplexer                              : 1
+ 115-bit 2-to-1 multiplexer                            : 2
+ 3-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 60
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 9
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 1
+ 65-bit 2-to-1 multiplexer                             : 9
+ 8-bit 2-to-1 multiplexer                              : 16
+# FSMs                                                 : 3
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <P_7> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_6> 
+INFO:Xst:2261 - The FF/Latch <P_8> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_7> 
+INFO:Xst:2261 - The FF/Latch <P_9> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_8> 
+INFO:Xst:2261 - The FF/Latch <P_10> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_9> 
+INFO:Xst:2261 - The FF/Latch <P_11> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_10> 
+INFO:Xst:2261 - The FF/Latch <P_12> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_11> 
+INFO:Xst:2261 - The FF/Latch <P_13> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_12> 
+INFO:Xst:2261 - The FF/Latch <P_14> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_13> 
+INFO:Xst:2261 - The FF/Latch <P_15> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_14> 
+INFO:Xst:2261 - The FF/Latch <P_20> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_19> 
+INFO:Xst:2261 - The FF/Latch <P_16> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_15> 
+INFO:Xst:2261 - The FF/Latch <P_21> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_20> 
+INFO:Xst:2261 - The FF/Latch <P_17> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_16> 
+INFO:Xst:2261 - The FF/Latch <P_22> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_21> 
+INFO:Xst:2261 - The FF/Latch <P_18> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_17> 
+INFO:Xst:2261 - The FF/Latch <P_23> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_22> 
+INFO:Xst:2261 - The FF/Latch <P_19> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_18> 
+INFO:Xst:2261 - The FF/Latch <P_24> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_23> 
+INFO:Xst:2261 - The FF/Latch <P_25> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_24> 
+INFO:Xst:2261 - The FF/Latch <P_30> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_29> 
+INFO:Xst:2261 - The FF/Latch <P_26> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_25> 
+INFO:Xst:2261 - The FF/Latch <P_31> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_30> 
+INFO:Xst:2261 - The FF/Latch <P_27> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_26> 
+INFO:Xst:2261 - The FF/Latch <P_32> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_31> 
+INFO:Xst:2261 - The FF/Latch <P_28> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_27> 
+INFO:Xst:2261 - The FF/Latch <P_33> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_0> 
+INFO:Xst:2261 - The FF/Latch <P_29> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_28> 
+INFO:Xst:2261 - The FF/Latch <P_34> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_1> 
+INFO:Xst:2261 - The FF/Latch <P_35> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_2> 
+INFO:Xst:2261 - The FF/Latch <P_40> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_7> 
+INFO:Xst:2261 - The FF/Latch <P_36> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_3> 
+INFO:Xst:2261 - The FF/Latch <P_41> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_8> 
+INFO:Xst:2261 - The FF/Latch <P_37> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_4> 
+INFO:Xst:2261 - The FF/Latch <P_42> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_9> 
+INFO:Xst:2261 - The FF/Latch <P_38> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_5> 
+INFO:Xst:2261 - The FF/Latch <P_43> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_10> 
+INFO:Xst:2261 - The FF/Latch <P_39> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_6> 
+INFO:Xst:2261 - The FF/Latch <P_44> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_11> 
+INFO:Xst:2261 - The FF/Latch <P_45> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_12> 
+INFO:Xst:2261 - The FF/Latch <P_50> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_17> 
+INFO:Xst:2261 - The FF/Latch <P_46> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_13> 
+INFO:Xst:2261 - The FF/Latch <P_51> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_18> 
+INFO:Xst:2261 - The FF/Latch <P_47> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_14> 
+INFO:Xst:2261 - The FF/Latch <P_52> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_19> 
+INFO:Xst:2261 - The FF/Latch <P_48> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_15> 
+INFO:Xst:2261 - The FF/Latch <P_53> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_20> 
+INFO:Xst:2261 - The FF/Latch <P_49> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_16> 
+INFO:Xst:2261 - The FF/Latch <P_54> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_21> 
+INFO:Xst:2261 - The FF/Latch <P_55> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_22> 
+INFO:Xst:2261 - The FF/Latch <P_60> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_27> 
+INFO:Xst:2261 - The FF/Latch <P_56> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_23> 
+INFO:Xst:2261 - The FF/Latch <P_61> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_28> 
+INFO:Xst:2261 - The FF/Latch <P_57> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_24> 
+INFO:Xst:2261 - The FF/Latch <P_62> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_29> 
+INFO:Xst:2261 - The FF/Latch <P_58> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_25> 
+INFO:Xst:2261 - The FF/Latch <P_63> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_30> 
+INFO:Xst:2261 - The FF/Latch <P_59> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_26> 
+INFO:Xst:2261 - The FF/Latch <P_64> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <UpperB_31> 
+INFO:Xst:2261 - The FF/Latch <P_1> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_0> 
+INFO:Xst:2261 - The FF/Latch <P_2> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_1> 
+INFO:Xst:2261 - The FF/Latch <P_3> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_2> 
+INFO:Xst:2261 - The FF/Latch <P_4> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_3> 
+INFO:Xst:2261 - The FF/Latch <P_5> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_4> 
+INFO:Xst:2261 - The FF/Latch <P_6> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <LowerB_5> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_10> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_10> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_0> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_0> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_11> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_11> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_1> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_1> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_12> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_12> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_2> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_2> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_13> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_13> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_3> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_3> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_14> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_14> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_4> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_4> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_15> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_15> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_20> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_20> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_5> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_5> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_16> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_16> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_21> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_21> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_6> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_6> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_17> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_17> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_22> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_22> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_7> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_7> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_18> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_18> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_23> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_23> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_8> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_8> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_19> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_19> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_24> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_24> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_9> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_9> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_25> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_25> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_30> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_30> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_26> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_26> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_31> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_31> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_27> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_27> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_32> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_0> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_28> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_28> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_33> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_1> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_29> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <LowerU_29> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_34> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_2> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_35> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_3> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_40> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_8> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_36> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_4> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_41> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_9> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_37> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_5> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_42> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_10> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_38> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_6> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_43> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_11> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_39> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_7> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_44> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_12> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_45> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_13> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_50> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_18> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_46> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_14> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_51> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_19> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_47> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_15> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_52> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_20> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_48> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_16> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_53> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_21> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_49> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_17> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_54> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_22> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_55> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_23> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_60> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_28> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_56> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_24> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_61> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_29> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_57> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_25> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_62> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_30> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_58> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_26> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_63> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_31> 
+INFO:Xst:2261 - The FF/Latch <temp_sum_59> in Unit <MULTU> is equivalent to the following FF/Latch, which will be removed : <UpperU_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_15> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_15> 
+INFO:Xst:2261 - The FF/Latch <rem_div_20> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_20> 
+INFO:Xst:2261 - The FF/Latch <rem_div_16> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_16> 
+INFO:Xst:2261 - The FF/Latch <rem_div_21> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_21> 
+INFO:Xst:2261 - The FF/Latch <rem_div_17> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_17> 
+INFO:Xst:2261 - The FF/Latch <rem_div_22> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_22> 
+INFO:Xst:2261 - The FF/Latch <rem_div_18> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_18> 
+INFO:Xst:2261 - The FF/Latch <rem_div_23> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_23> 
+INFO:Xst:2261 - The FF/Latch <rem_div_19> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_19> 
+INFO:Xst:2261 - The FF/Latch <rem_div_24> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_24> 
+INFO:Xst:2261 - The FF/Latch <rem_div_25> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_25> 
+INFO:Xst:2261 - The FF/Latch <rem_div_30> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_30> 
+INFO:Xst:2261 - The FF/Latch <rem_div_26> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_26> 
+INFO:Xst:2261 - The FF/Latch <rem_div_31> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_31> 
+INFO:Xst:2261 - The FF/Latch <rem_div_0> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_0> 
+INFO:Xst:2261 - The FF/Latch <rem_div_27> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_1> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_1> 
+INFO:Xst:2261 - The FF/Latch <rem_div_28> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_28> 
+INFO:Xst:2261 - The FF/Latch <rem_div_33> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_0> 
+INFO:Xst:2261 - The FF/Latch <rem_div_2> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_2> 
+INFO:Xst:2261 - The FF/Latch <rem_div_29> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_29> 
+INFO:Xst:2261 - The FF/Latch <rem_div_34> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_1> 
+INFO:Xst:2261 - The FF/Latch <rem_div_3> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_3> 
+INFO:Xst:2261 - The FF/Latch <rem_div_35> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_2> 
+INFO:Xst:2261 - The FF/Latch <rem_div_40> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_7> 
+INFO:Xst:2261 - The FF/Latch <rem_div_4> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_4> 
+INFO:Xst:2261 - The FF/Latch <rem_div_36> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_3> 
+INFO:Xst:2261 - The FF/Latch <rem_div_41> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_8> 
+INFO:Xst:2261 - The FF/Latch <rem_div_5> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_5> 
+INFO:Xst:2261 - The FF/Latch <rem_div_37> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_4> 
+INFO:Xst:2261 - The FF/Latch <rem_div_42> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_9> 
+INFO:Xst:2261 - The FF/Latch <rem_div_6> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_6> 
+INFO:Xst:2261 - The FF/Latch <rem_div_38> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_5> 
+INFO:Xst:2261 - The FF/Latch <rem_div_43> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_10> 
+INFO:Xst:2261 - The FF/Latch <rem_div_7> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_7> 
+INFO:Xst:2261 - The FF/Latch <rem_div_39> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_6> 
+INFO:Xst:2261 - The FF/Latch <rem_div_44> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_11> 
+INFO:Xst:2261 - The FF/Latch <rem_div_8> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_8> 
+INFO:Xst:2261 - The FF/Latch <rem_div_45> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_12> 
+INFO:Xst:2261 - The FF/Latch <rem_div_50> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_17> 
+INFO:Xst:2261 - The FF/Latch <rem_div_9> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_9> 
+INFO:Xst:2261 - The FF/Latch <rem_div_46> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_13> 
+INFO:Xst:2261 - The FF/Latch <rem_div_51> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_18> 
+INFO:Xst:2261 - The FF/Latch <rem_div_47> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_14> 
+INFO:Xst:2261 - The FF/Latch <rem_div_52> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_19> 
+INFO:Xst:2261 - The FF/Latch <rem_div_48> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_15> 
+INFO:Xst:2261 - The FF/Latch <rem_div_53> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_20> 
+INFO:Xst:2261 - The FF/Latch <rem_div_49> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_16> 
+INFO:Xst:2261 - The FF/Latch <rem_div_54> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_21> 
+INFO:Xst:2261 - The FF/Latch <rem_div_55> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_22> 
+INFO:Xst:2261 - The FF/Latch <rem_div_60> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_56> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_23> 
+INFO:Xst:2261 - The FF/Latch <rem_div_61> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_28> 
+INFO:Xst:2261 - The FF/Latch <rem_div_57> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_24> 
+INFO:Xst:2261 - The FF/Latch <rem_div_62> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_29> 
+INFO:Xst:2261 - The FF/Latch <rem_div_58> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_25> 
+INFO:Xst:2261 - The FF/Latch <rem_div_63> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_30> 
+INFO:Xst:2261 - The FF/Latch <rem_div_59> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <RemainderDU_26> 
+INFO:Xst:2261 - The FF/Latch <rem_div_10> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_10> 
+INFO:Xst:2261 - The FF/Latch <rem_div_11> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_11> 
+INFO:Xst:2261 - The FF/Latch <rem_div_12> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_12> 
+INFO:Xst:2261 - The FF/Latch <rem_div_13> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_13> 
+INFO:Xst:2261 - The FF/Latch <rem_div_14> in Unit <DIVU> is equivalent to the following FF/Latch, which will be removed : <QuotientDU_14> 
+INFO:Xst:2261 - The FF/Latch <rem_div_33> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_0> 
+INFO:Xst:2261 - The FF/Latch <rem_div_34> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_1> 
+INFO:Xst:2261 - The FF/Latch <rem_div_35> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_2> 
+INFO:Xst:2261 - The FF/Latch <rem_div_40> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_7> 
+INFO:Xst:2261 - The FF/Latch <rem_div_36> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_3> 
+INFO:Xst:2261 - The FF/Latch <rem_div_41> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_8> 
+INFO:Xst:2261 - The FF/Latch <rem_div_37> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_4> 
+INFO:Xst:2261 - The FF/Latch <rem_div_42> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_9> 
+INFO:Xst:2261 - The FF/Latch <rem_div_38> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_5> 
+INFO:Xst:2261 - The FF/Latch <rem_div_43> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_10> 
+INFO:Xst:2261 - The FF/Latch <rem_div_39> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_6> 
+INFO:Xst:2261 - The FF/Latch <rem_div_44> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_11> 
+INFO:Xst:2261 - The FF/Latch <rem_div_45> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_12> 
+INFO:Xst:2261 - The FF/Latch <rem_div_50> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_17> 
+INFO:Xst:2261 - The FF/Latch <rem_div_46> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_13> 
+INFO:Xst:2261 - The FF/Latch <rem_div_51> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_18> 
+INFO:Xst:2261 - The FF/Latch <rem_div_47> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_14> 
+INFO:Xst:2261 - The FF/Latch <rem_div_52> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_19> 
+INFO:Xst:2261 - The FF/Latch <rem_div_48> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_15> 
+INFO:Xst:2261 - The FF/Latch <rem_div_53> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_20> 
+INFO:Xst:2261 - The FF/Latch <rem_div_49> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_16> 
+INFO:Xst:2261 - The FF/Latch <rem_div_54> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_21> 
+INFO:Xst:2261 - The FF/Latch <rem_div_55> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_22> 
+INFO:Xst:2261 - The FF/Latch <rem_div_60> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_27> 
+INFO:Xst:2261 - The FF/Latch <rem_div_56> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_23> 
+INFO:Xst:2261 - The FF/Latch <rem_div_61> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_28> 
+INFO:Xst:2261 - The FF/Latch <rem_div_57> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_24> 
+INFO:Xst:2261 - The FF/Latch <rem_div_62> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_29> 
+INFO:Xst:2261 - The FF/Latch <rem_div_58> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_25> 
+INFO:Xst:2261 - The FF/Latch <rem_div_63> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_30> 
+INFO:Xst:2261 - The FF/Latch <rem_div_59> in Unit <DIV> is equivalent to the following FF/Latch, which will be removed : <RemainderD_26> 
+INFO:Xst:2261 - The FF/Latch <X_2> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_2> 
+INFO:Xst:2261 - The FF/Latch <X_3> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_3> 
+INFO:Xst:2261 - The FF/Latch <X_4> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_4> 
+INFO:Xst:2261 - The FF/Latch <X_5> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_5> 
+INFO:Xst:2261 - The FF/Latch <X_6> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_6> 
+INFO:Xst:2261 - The FF/Latch <X_7> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_7> 
+INFO:Xst:2261 - The FF/Latch <X_10> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_10> 
+INFO:Xst:2261 - The FF/Latch <X_8> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_8> 
+INFO:Xst:2261 - The FF/Latch <X_11> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_11> 
+INFO:Xst:2261 - The FF/Latch <X_9> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_9> 
+INFO:Xst:2261 - The FF/Latch <X_12> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_12> 
+INFO:Xst:2261 - The FF/Latch <X_13> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_13> 
+INFO:Xst:2261 - The FF/Latch <X_14> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_14> 
+INFO:Xst:2261 - The FF/Latch <X_15> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_15> 
+INFO:Xst:2261 - The FF/Latch <X_20> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_20> 
+INFO:Xst:2261 - The FF/Latch <X_16> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_16> 
+INFO:Xst:2261 - The FF/Latch <X_21> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_21> 
+INFO:Xst:2261 - The FF/Latch <X_17> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_17> 
+INFO:Xst:2261 - The FF/Latch <X_22> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_22> 
+INFO:Xst:2261 - The FF/Latch <X_18> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_18> 
+INFO:Xst:2261 - The FF/Latch <X_23> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_23> 
+INFO:Xst:2261 - The FF/Latch <X_19> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_19> 
+INFO:Xst:2261 - The FF/Latch <X_24> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_24> 
+INFO:Xst:2261 - The FF/Latch <X_25> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_25> 
+INFO:Xst:2261 - The FF/Latch <X_30> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_30> 
+INFO:Xst:2261 - The FF/Latch <X_26> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_26> 
+INFO:Xst:2261 - The FF/Latch <X_31> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_31> 
+INFO:Xst:2261 - The FF/Latch <X_27> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_27> 
+INFO:Xst:2261 - The FF/Latch <X_28> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_28> 
+INFO:Xst:2261 - The FF/Latch <X_29> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_29> 
+INFO:Xst:2261 - The FF/Latch <X_0> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_0> 
+INFO:Xst:2261 - The FF/Latch <X_1> in Unit <SL_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SLL_1> 
+INFO:Xst:2261 - The FF/Latch <X_2> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_2> 
+INFO:Xst:2261 - The FF/Latch <X_3> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_3> 
+INFO:Xst:2261 - The FF/Latch <X_4> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_4> 
+INFO:Xst:2261 - The FF/Latch <X_5> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_5> 
+INFO:Xst:2261 - The FF/Latch <X_6> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_6> 
+INFO:Xst:2261 - The FF/Latch <X_7> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_7> 
+INFO:Xst:2261 - The FF/Latch <X_10> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_10> 
+INFO:Xst:2261 - The FF/Latch <X_8> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_8> 
+INFO:Xst:2261 - The FF/Latch <X_11> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_11> 
+INFO:Xst:2261 - The FF/Latch <X_9> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_9> 
+INFO:Xst:2261 - The FF/Latch <X_12> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_12> 
+INFO:Xst:2261 - The FF/Latch <X_13> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_13> 
+INFO:Xst:2261 - The FF/Latch <X_14> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_14> 
+INFO:Xst:2261 - The FF/Latch <X_15> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_15> 
+INFO:Xst:2261 - The FF/Latch <X_20> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_20> 
+INFO:Xst:2261 - The FF/Latch <X_16> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_16> 
+INFO:Xst:2261 - The FF/Latch <X_21> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_21> 
+INFO:Xst:2261 - The FF/Latch <X_17> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_17> 
+INFO:Xst:2261 - The FF/Latch <X_22> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_22> 
+INFO:Xst:2261 - The FF/Latch <X_18> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_18> 
+INFO:Xst:2261 - The FF/Latch <X_23> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_23> 
+INFO:Xst:2261 - The FF/Latch <X_19> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_19> 
+INFO:Xst:2261 - The FF/Latch <X_24> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_24> 
+INFO:Xst:2261 - The FF/Latch <X_25> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_25> 
+INFO:Xst:2261 - The FF/Latch <X_30> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_30> 
+INFO:Xst:2261 - The FF/Latch <X_26> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_26> 
+INFO:Xst:2261 - The FF/Latch <X_31> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_31> 
+INFO:Xst:2261 - The FF/Latch <X_27> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_27> 
+INFO:Xst:2261 - The FF/Latch <X_28> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_28> 
+INFO:Xst:2261 - The FF/Latch <X_29> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_29> 
+INFO:Xst:2261 - The FF/Latch <X_0> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_0> 
+INFO:Xst:2261 - The FF/Latch <X_1> in Unit <SR_ARITH> is equivalent to the following FF/Latch, which will be removed : <Output_SRA_1> 
+INFO:Xst:2261 - The FF/Latch <X_2> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_2> 
+INFO:Xst:2261 - The FF/Latch <X_3> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_3> 
+INFO:Xst:2261 - The FF/Latch <X_4> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_4> 
+INFO:Xst:2261 - The FF/Latch <X_5> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_5> 
+INFO:Xst:2261 - The FF/Latch <X_6> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_6> 
+INFO:Xst:2261 - The FF/Latch <X_7> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_7> 
+INFO:Xst:2261 - The FF/Latch <X_10> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_10> 
+INFO:Xst:2261 - The FF/Latch <X_8> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_8> 
+INFO:Xst:2261 - The FF/Latch <X_11> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_11> 
+INFO:Xst:2261 - The FF/Latch <X_9> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_9> 
+INFO:Xst:2261 - The FF/Latch <X_12> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_12> 
+INFO:Xst:2261 - The FF/Latch <X_13> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_13> 
+INFO:Xst:2261 - The FF/Latch <X_14> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_14> 
+INFO:Xst:2261 - The FF/Latch <X_15> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_15> 
+INFO:Xst:2261 - The FF/Latch <X_20> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_20> 
+INFO:Xst:2261 - The FF/Latch <X_16> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_16> 
+INFO:Xst:2261 - The FF/Latch <X_21> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_21> 
+INFO:Xst:2261 - The FF/Latch <X_17> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_17> 
+INFO:Xst:2261 - The FF/Latch <X_22> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_22> 
+INFO:Xst:2261 - The FF/Latch <X_18> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_18> 
+INFO:Xst:2261 - The FF/Latch <X_23> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_23> 
+INFO:Xst:2261 - The FF/Latch <X_19> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_19> 
+INFO:Xst:2261 - The FF/Latch <X_24> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_24> 
+INFO:Xst:2261 - The FF/Latch <X_25> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_25> 
+INFO:Xst:2261 - The FF/Latch <X_30> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_30> 
+INFO:Xst:2261 - The FF/Latch <X_26> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_26> 
+INFO:Xst:2261 - The FF/Latch <X_31> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_31> 
+INFO:Xst:2261 - The FF/Latch <X_27> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_27> 
+INFO:Xst:2261 - The FF/Latch <X_28> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_28> 
+INFO:Xst:2261 - The FF/Latch <X_29> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_29> 
+INFO:Xst:2261 - The FF/Latch <X_0> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_0> 
+INFO:Xst:2261 - The FF/Latch <X_1> in Unit <SR_LOGI> is equivalent to the following FF/Latch, which will be removed : <Output_SRL_1> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with sequential encoding.
+------------------------
+ State      | Encoding
+------------------------
+ waiting    | 00
+ sending    | 10
+ processing | 11
+ receiving  | 01
+------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <UART1/FSM_2> on signal <uart_rx_state[1:2]> with user encoding.
+---------------------------------------
+ State                     | Encoding
+---------------------------------------
+ rx_wait_start_synchronise | 00
+ rx_get_start_bit          | 01
+ rx_get_data               | 10
+ rx_get_stop_bit           | 11
+---------------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <UART1/FSM_1> on signal <uart_tx_state[1:3]> with user encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ idle           | 000
+ wait_for_tick  | 001
+ send_start_bit | 010
+ transmit_data  | 011
+ send_stop_bit  | 100
+----------------------------
+WARNING:Xst:1293 - FF/Latch <temp_sum_64> has a constant value of 0 in block <MULTU>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <P_63> in Unit <BOOTH_MULT> is equivalent to the following FF/Latch, which will be removed : <P_64> 
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <UART> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <BOOTH_MULT> ...
+
+Optimizing unit <MULTU> ...
+
+Optimizing unit <DIVU> ...
+
+Optimizing unit <DIV> ...
+
+Optimizing unit <SL_LOGI> ...
+
+Optimizing unit <SR_ARITH> ...
+
+Optimizing unit <SR_LOGI> ...
+INFO:Xst:2261 - The FF/Latch <ALU1/multb32/S_64> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <ALU1/multb32/A_33> 
+INFO:Xst:2261 - The FF/Latch <ALU1/div32/QuotientD_0> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <ALU1/div32/rem_div_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 4.
+FlipFlop Operand1_10 has been replicated 1 time(s)
+FlipFlop Operand1_2 has been replicated 1 time(s)
+FlipFlop Operand1_3 has been replicated 1 time(s)
+FlipFlop Operand1_6 has been replicated 1 time(s)
+FlipFlop Operand1_7 has been replicated 1 time(s)
+FlipFlop Operand1_8 has been replicated 1 time(s)
+FlipFlop Operand1_9 has been replicated 1 time(s)
+FlipFlop Operand2_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 887
+ Flip-Flops                                            : 887
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2979
+#      GND                         : 1
+#      INV                         : 134
+#      LUT1                        : 3
+#      LUT2                        : 351
+#      LUT3                        : 462
+#      LUT4                        : 249
+#      LUT5                        : 325
+#      LUT6                        : 585
+#      MUXCY                       : 444
+#      MUXF7                       : 45
+#      VCC                         : 1
+#      XORCY                       : 379
+# FlipFlops/Latches                : 887
+#      FD                          : 406
+#      FDC                         : 9
+#      FDCE                        : 27
+#      FDE                         : 336
+#      FDP                         : 4
+#      FDPE                        : 8
+#      FDR                         : 4
+#      FDRE                        : 93
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 3
+#      OBUF                        : 7
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             887  out of  126800     0%  
+ Number of Slice LUTs:                 2109  out of  63400     3%  
+    Number used as Logic:              2109  out of  63400     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2159
+   Number with an unused Flip Flop:    1272  out of   2159    58%  
+   Number with an unused LUT:            50  out of   2159     2%  
+   Number of fully used LUT-FF pairs:   837  out of   2159    38%  
+   Number of unique control sets:        32
+
+IO Utilization: 
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    210     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK                              | BUFGP                  | 887   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 6.130ns (Maximum Frequency: 163.127MHz)
+   Minimum input arrival time before clock: 4.012ns
+   Maximum output required time after clock: 1.738ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 6.130ns (frequency: 163.127MHz)
+  Total number of paths / destination ports: 89431 / 1354
+-------------------------------------------------------------------------
+Delay:               6.130ns (Levels of Logic = 67)
+  Source:            ALU1/div32/rem_div_32 (FF)
+  Destination:       ALU1/div32/QuotientD_31 (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: ALU1/div32/rem_div_32 to ALU1/div32/QuotientD_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.536  ALU1/div32/rem_div_32 (ALU1/div32/rem_div_32)
+     LUT2:I0->O            1   0.124   0.000  ALU1/div32/Msub_n0081_lut<0> (ALU1/div32/Msub_n0081_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  ALU1/div32/Msub_n0081_cy<0> (ALU1/div32/Msub_n0081_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<1> (ALU1/div32/Msub_n0081_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<2> (ALU1/div32/Msub_n0081_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<3> (ALU1/div32/Msub_n0081_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<4> (ALU1/div32/Msub_n0081_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<5> (ALU1/div32/Msub_n0081_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<6> (ALU1/div32/Msub_n0081_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<7> (ALU1/div32/Msub_n0081_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<8> (ALU1/div32/Msub_n0081_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<9> (ALU1/div32/Msub_n0081_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<10> (ALU1/div32/Msub_n0081_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<11> (ALU1/div32/Msub_n0081_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<12> (ALU1/div32/Msub_n0081_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<13> (ALU1/div32/Msub_n0081_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<14> (ALU1/div32/Msub_n0081_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<15> (ALU1/div32/Msub_n0081_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<16> (ALU1/div32/Msub_n0081_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<17> (ALU1/div32/Msub_n0081_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<18> (ALU1/div32/Msub_n0081_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<19> (ALU1/div32/Msub_n0081_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<20> (ALU1/div32/Msub_n0081_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<21> (ALU1/div32/Msub_n0081_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<22> (ALU1/div32/Msub_n0081_cy<22>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<23> (ALU1/div32/Msub_n0081_cy<23>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<24> (ALU1/div32/Msub_n0081_cy<24>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<25> (ALU1/div32/Msub_n0081_cy<25>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<26> (ALU1/div32/Msub_n0081_cy<26>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<27> (ALU1/div32/Msub_n0081_cy<27>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<28> (ALU1/div32/Msub_n0081_cy<28>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Msub_n0081_cy<29> (ALU1/div32/Msub_n0081_cy<29>)
+     MUXCY:CI->O           0   0.029   0.000  ALU1/div32/Msub_n0081_cy<30> (ALU1/div32/Msub_n0081_cy<30>)
+     XORCY:CI->O          35   0.510   0.552  ALU1/div32/Msub_n0081_xor<31> (ALU1/div32/n0081<31>)
+     INV:I->O              1   0.146   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_lut<0>_INV_0 (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<0> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<1> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<2> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<3> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<4> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<5> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<6> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<7> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<8> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<9> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<10> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<11> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<12> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<13> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<14> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<15> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<16> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<17> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<18> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<19> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<20> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<21> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<22> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<23> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<24> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<25> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<26> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<27> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<28> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<28>)
+     MUXCY:CI->O           1   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<29> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<29>)
+     MUXCY:CI->O           0   0.029   0.000  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<30> (ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_cy<30>)
+     XORCY:CI->O           1   0.510   0.421  ALU1/div32/Madd_GND_20_o_GND_20_o_add_3_OUT_xor<31> (ALU1/div32/GND_20_o_GND_20_o_add_3_OUT<31>)
+     LUT5:I4->O            1   0.124   0.000  ALU1/div32/Mmux_GND_20_o_GND_20_o_mux_11_OUT134 (ALU1/div32/n0072<31>)
+     FD:D                      0.030          ALU1/div32/QuotientD_31
+    ----------------------------------------
+    Total                      6.130ns (4.621ns logic, 1.509ns route)
+                                       (75.4% logic, 24.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 1503 / 632
+-------------------------------------------------------------------------
+Offset:              4.012ns (Levels of Logic = 6)
+  Source:            RESET (PAD)
+  Destination:       storage_112 (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: RESET to storage_112
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           148   0.001   0.599  RESET_IBUF (RESET_IBUF)
+     LUT2:I1->O            7   0.124   0.979  Control<5>1 (Control<5>)
+     LUT6:I0->O           87   0.124   0.586  ALU1/Mmux_Status31 (Status<2>)
+     LUT5:I4->O            1   0.124   0.776  Mmux_state[1]_storage[114]_wide_mux_117_OUT177 (Mmux_state[1]_storage[114]_wide_mux_117_OUT175)
+     LUT6:I2->O            1   0.124   0.421  Mmux_state[1]_storage[114]_wide_mux_117_OUT1712_SW0 (N175)
+     LUT6:I5->O            1   0.124   0.000  Mmux_state[1]_storage[114]_wide_mux_117_OUT1712 (state[1]_storage[114]_wide_mux_117_OUT<112>)
+     FDE:D                     0.030          storage_112
+    ----------------------------------------
+    Total                      4.012ns (0.651ns logic, 3.361ns route)
+                                       (16.2% logic, 83.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 8 / 7
+-------------------------------------------------------------------------
+Offset:              1.738ns (Levels of Logic = 2)
+  Source:            state_FSM_FFd2 (FF)
+  Destination:       STATE_LED<0> (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: state_FSM_FFd2 to STATE_LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            252   0.478   0.737  state_FSM_FFd2 (state_FSM_FFd2)
+     LUT2:I0->O            1   0.124   0.399  STATE_LED<0>1 (STATE_LED_0_OBUF)
+     OBUF:I->O                 0.000          STATE_LED_0_OBUF (STATE_LED<0>)
+    ----------------------------------------
+    Total                      1.738ns (0.602ns logic, 1.136ns route)
+                                       (34.6% logic, 65.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |    6.130|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.33 secs
+ 
+--> 
+
+Total memory usage is 461888 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :  640 (   0 filtered)
+

@@ -1,0 +1,2 @@
+vhdl isim_temp "SLTU.vhd"
+vhdl isim_temp "SLTU_TEST.vhd"

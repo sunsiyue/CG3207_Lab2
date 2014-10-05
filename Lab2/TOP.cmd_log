@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/CG3207/Lab2/TOP.xst" -ofn "C:/CG3207/Lab2/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 

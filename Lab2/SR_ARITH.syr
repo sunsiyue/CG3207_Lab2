@@ -1,0 +1,410 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: SR_ARITH.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SR_ARITH.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SR_ARITH"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : SR_ARITH
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\CG3207\Lab2\SR_ARITH.vhd" into library work
+Parsing entity <SR_ARITH>.
+Parsing architecture <SR_ARITH_ARCHI> of entity <sr_arith>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SR_ARITH> (architecture <SR_ARITH_ARCHI>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SR_ARITH>.
+    Related source file is "C:\CG3207\Lab2\SR_ARITH.vhd".
+        width = 32
+    Found 32-bit register for signal <Y>.
+    Found 32-bit register for signal <X>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <MSB>.
+    Summary:
+	inferred  66 D-type flip-flop(s).
+	inferred  18 Multiplexer(s).
+Unit <SR_ARITH> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 32-bit register                                       : 2
+# Multiplexers                                         : 18
+ 1-bit 2-to-1 multiplexer                              : 10
+ 32-bit 2-to-1 multiplexer                             : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Multiplexers                                         : 49
+ 1-bit 2-to-1 multiplexer                              : 42
+ 32-bit 2-to-1 multiplexer                             : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Y_5> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_6> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_7> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_8> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_9> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_10> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_11> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_12> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_13> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_14> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_15> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_16> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_17> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_18> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_19> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_20> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_21> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_22> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_23> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_24> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_25> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_26> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_27> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_28> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_29> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_30> of sequential type is unconnected in block <SR_ARITH>.
+WARNING:Xst:2677 - Node <Y_31> of sequential type is unconnected in block <SR_ARITH>.
+
+Optimizing unit <SR_ARITH> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SR_ARITH, actual ratio is 0.
+FlipFlop MSB has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop MSB connected to a primary input has been replicated
+FlipFlop Y_0 has been replicated 1 time(s)
+FlipFlop Y_1 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SR_ARITH.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 230
+#      LUT2                        : 1
+#      LUT3                        : 30
+#      LUT4                        : 15
+#      LUT5                        : 36
+#      LUT6                        : 112
+#      MUXF7                       : 36
+# FlipFlops/Latches                : 43
+#      FD                          : 42
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 70
+#      IBUF                        : 38
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              43  out of  126800     0%  
+ Number of Slice LUTs:                  194  out of  63400     0%  
+    Number used as Logic:               194  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    198
+   Number with an unused Flip Flop:     155  out of    198    78%  
+   Number with an unused LUT:             4  out of    198     2%  
+   Number of fully used LUT-FF pairs:    39  out of    198    19%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          98
+ Number of bonded IOBs:                  71  out of    210    33%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 43    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.733ns (Maximum Frequency: 267.873MHz)
+   Minimum input arrival time before clock: 3.237ns
+   Maximum output required time after clock: 0.917ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 3.733ns (frequency: 267.873MHz)
+  Total number of paths / destination ports: 1673 / 41
+-------------------------------------------------------------------------
+Delay:               3.733ns (Levels of Logic = 4)
+  Source:            flag (FF)
+  Destination:       X_2 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: flag to X_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             94   0.478   1.105  flag (flag)
+     LUT6:I0->O            1   0.124   0.421  Y<3>1_SW0_F (N98)
+     LUT3:I2->O            1   0.124   0.776  Y<3>1_SW01 (N14)
+     LUT6:I2->O            2   0.124   0.427  Y<3>1 (Y<3>_mmx_out1)
+     LUT5:I4->O            1   0.124   0.000  Mmux_X[31]_X[31]_mux_7_OUT111 (X[31]_X[31]_mux_7_OUT<18>)
+     FD:D                      0.030          X_18
+    ----------------------------------------
+    Total                      3.733ns (1.004ns logic, 2.729ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 668 / 43
+-------------------------------------------------------------------------
+Offset:              3.237ns (Levels of Logic = 5)
+  Source:            Operand1<6> (PAD)
+  Destination:       X_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Operand1<6> to X_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.730  Operand1_6_IBUF (Operand1_6_IBUF)
+     LUT3:I0->O            2   0.124   0.722  flag_INV_1_o51 (flag_INV_1_o_mmx_out13)
+     LUT5:I2->O            2   0.124   0.722  Y<1>131 (Y<1>_mmx_out20)
+     LUT5:I2->O            1   0.124   0.536  Mmux_X[31]_X[31]_mux_7_OUT25 (Mmux_X[31]_X[31]_mux_7_OUT24)
+     LUT6:I4->O            1   0.124   0.000  Mmux_X[31]_X[31]_mux_7_OUT26 (X[31]_X[31]_mux_7_OUT<0>)
+     FD:D                      0.030          X_0
+    ----------------------------------------
+    Total                      3.237ns (0.527ns logic, 2.710ns route)
+                                       (16.3% logic, 83.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              0.917ns (Levels of Logic = 1)
+  Source:            X_31 (FF)
+  Destination:       Output_SRA<31> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: X_31 to Output_SRA<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.478   0.439  X_31 (X_31)
+     OBUF:I->O                 0.000          Output_SRA_31_OBUF (Output_SRA<31>)
+    ----------------------------------------
+    Total                      0.917ns (0.478ns logic, 0.439ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    3.733|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.05 secs
+ 
+--> 
+
+Total memory usage is 420004 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

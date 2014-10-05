@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/CG3207/Lab2/ADD.xst" -ofn "C:/CG3207/Lab2/ADD.syr" 
+xst -intstyle ise -ifn "C:/CG3207/Lab2/ADD.xst" -ofn "C:/CG3207/Lab2/ADD.syr" 
+xst -intstyle ise -ifn "C:/CG3207/Lab2/ADD.xst" -ofn "C:/CG3207/Lab2/ADD.syr" 
+xst -intstyle ise -ifn "C:/CG3207/Lab2/ADD.xst" -ofn "C:/CG3207/Lab2/ADD.syr" 

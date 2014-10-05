@@ -1,0 +1,29 @@
+Command line:
+   SLT_TEST_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49587
+
+Wed Oct 01 04:16:05 2014
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 663.446 Meg
+
+ Total Signals          : 10
+ Total Nets             : 98
+ Total Signal Drivers   : 5
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 3
+ Total Traceable Variables  : 12
+ Total Scalar Nets and Variables : 478
+Total Line Count : 16
+
+ Total Simulation Time: 0.0468 sec
+
+ Current Memory Usage: 663.446 Meg
+
+Wed Oct 01 04:16:13 2014
+
